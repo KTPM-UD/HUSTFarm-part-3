@@ -30,7 +30,7 @@ CREATE TABLE VatNuoi (
     loai NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
 	tenGiong NVARCHAR(100) NOT NULL,
 	tenChuong NVARCHAR(30) NOT NULL DEFAULT N'A1',
-    gioitinh NVARCHAR(30) NOT NULL DEFAULT N'Đực', --Cái || Đực
+    gioitinh NVARCHAR(30) NOT NULL DEFAULT N'Đực' CHECK (gioitinh IN(N'Cái',N'Đực')), --Cái || Đực
     ngaySinh DATE NOT NULL,
     canNang FLOAT NOT NULL CHECK (canNang > 0),
 	IDNguoiDung INT NOT NULL, -- Khóa ngoại
