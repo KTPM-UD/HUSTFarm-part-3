@@ -6,16 +6,20 @@ GO
 -- 1. Bảng Tài khoản
 CREATE TABLE TaiKhoan (
     TenDangNhap NVARCHAR(50) PRIMARY KEY,
-    MatKhau VARCHAR(255) NOT NULL DEFAULT 0,
+	TenHienThi NVARCHAR(50) NOT NULL DEFAULT 'NotNamedUser',
+    MatKhau VARCHAR(255) NOT NULL DEFAULT N'0',
     Email NVARCHAR(100) UNIQUE NOT NULL,
-    Type INT DEFAULT 0, --1: admin && 0: user
+    LoaiTaiKhoan INT DEFAULT 0 --1: admin && 0: user
 );
 
 -- 2. Bảng Người Dùng
 CREATE TABLE NguoiDung (
     IDNguoiDung INT IDENTITY PRIMARY KEY,
     HoTen NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập tên',
-    ThongTinLienHe NVARCHAR(200) NOT NULL DEFAULT N'Chưa nhập',
+	gioitinh NVARCHAR(30) NOT NULL CHECK (gioitinh IN(N'Nam',N'Nữ')),
+	NgaySinh DATE NOT NULL,
+	CCCD VARCHAR(50) NOT NULL,
+    Diachi NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
     TenDangNhap NVARCHAR(50) NOT NULL,
 	CONSTRAINT FK_NguoiDung_TaiKhoan FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap),
 );
@@ -24,10 +28,13 @@ CREATE TABLE NguoiDung (
 CREATE TABLE VatNuoi (
     IDVatNuoi INT IDENTITY PRIMARY KEY,
     loai NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
+	tenGiong NVARCHAR(100) NOT NULL,
+	tenChuong NVARCHAR(30) NOT NULL DEFAULT N'A1',
     gioitinh NVARCHAR(30) NOT NULL DEFAULT N'Đực', --Cái || Đực
     ngaySinh DATE NOT NULL,
-    canNang FLOAT NOT NULL,
+    canNang FLOAT NOT NULL CHECK (canNang > 0),
 	IDNguoiDung INT NOT NULL, -- Khóa ngoại
+	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung)
 );
 
 -- 4. Bảng Sức khỏe
@@ -40,7 +47,6 @@ CREATE TABLE SucKhoe (
 	CONSTRAINT FK_SucKhoe_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi)
 );
 
-
 -- 5. Bảng Kho
 CREATE TABLE Kho (
     maKho INT IDENTITY PRIMARY KEY,
@@ -52,8 +58,19 @@ CREATE TABLE ThucAnNuocUong (
     IDThucAn INT IDENTITY PRIMARY KEY,
     ten NVARCHAR(100) NOT NULL,
     loai NVARCHAR(100) NOT NULL,
-    soLuong NVARCHAR(100) NOT NULL,
+    soLuong INT NOT NULL CHECK (soLuong >= 0),
     hanSuDung DATE NOT NULL,
 	maKho INT NOT NULL,
 	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho),
+);
+
+-- 7. Bảng phân phối thức ăn
+CREATE TABLE PhanPhoiThucAn (
+	ID INT IDENTITY PRIMARY KEY,
+    IDThucAn INT NOT NULL,
+    IDVatNuoi INT NOT NULL,
+    ngay DATE NOT NULL,
+    soLuong FLOAT NOT NULL CHECK (soLuong > 0), --donvi kg
+	CONSTRAINT FK_PhanPhoiThucAn_ThucAnNuocUong FOREIGN KEY (IDThucAn) REFERENCES ThucAnNuocUong(IDThucAn) ON DELETE CASCADE,
+	CONSTRAINT FK_PhanPhoiThucAn_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi) ON DELETE CASCADE,
 );
