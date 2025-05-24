@@ -1,0 +1,8 @@
+INSERT INTO dbo.TaiKhoan(TenDangNhap, TenHienThi, MatKhau, Email, LoaiTaiKhoan)
+VALUES (N'tuank4',N'Minh Tuấn','2326','t@gmail.com','0')
+INSERT INTO dbo.TaiKhoan(TenDangNhap, TenHienThi, MatKhau, Email, LoaiTaiKhoan)
+VALUES (N'sangk3',N'Sang Sang','8386','Sa@gmail.com','0')
+INSERT INTO dbo.TaiKhoan(TenDangNhap, TenHienThi, MatKhau, Email, LoaiTaiKhoan)
+VALUES (N'khanhVQ',N'Khánh Vũ','1234','KVQ@gmail.com','0')
+INSERT INTO dbo.TaiKhoan(TenDangNhap, TenHienThi, MatKhau, Email, LoaiTaiKhoan)
+VALUES (N'LongHH',N'Long Hoàng','4567','Longp@gmail.com','0')

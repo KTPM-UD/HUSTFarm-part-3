@@ -74,3 +74,10 @@ CREATE TABLE PhanPhoiThucAn (
 	CONSTRAINT FK_PhanPhoiThucAn_ThucAnNuocUong FOREIGN KEY (IDThucAn) REFERENCES ThucAnNuocUong(IDThucAn) ON DELETE CASCADE,
 	CONSTRAINT FK_PhanPhoiThucAn_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi) ON DELETE CASCADE,
 );
+
+CREATE PROC USP_GetAccountByUserName
+@tenDangNhap NVARCHAR(50)
+AS
+BEGIN
+SELECT * FROM dbo.TaiKhoan WHERE TenDangNhap = @tenDangNhap
+END
