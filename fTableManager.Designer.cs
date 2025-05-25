@@ -33,9 +33,9 @@
             tbUserManage = new TabPage();
             dtgvAccount = new DataGridView();
             panel5 = new Panel();
-            btnSearch1 = new Button();
+            BtnSearch1 = new Button();
             btnDetails1 = new Button();
-            btnRefresh1 = new Button();
+            BtnRefresh1 = new Button();
             btnUpdate1 = new Button();
             btnDelete1 = new Button();
             btnAdd1 = new Button();
@@ -110,9 +110,9 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(btnSearch1);
+            panel5.Controls.Add(BtnSearch1);
             panel5.Controls.Add(btnDetails1);
-            panel5.Controls.Add(btnRefresh1);
+            panel5.Controls.Add(BtnRefresh1);
             panel5.Controls.Add(btnUpdate1);
             panel5.Controls.Add(btnDelete1);
             panel5.Controls.Add(btnAdd1);
@@ -121,14 +121,15 @@
             panel5.Size = new Size(2371, 115);
             panel5.TabIndex = 1;
             // 
-            // btnSearch1
+            // BtnSearch1
             // 
-            btnSearch1.Location = new Point(1505, 19);
-            btnSearch1.Name = "btnSearch1";
-            btnSearch1.Size = new Size(274, 69);
-            btnSearch1.TabIndex = 5;
-            btnSearch1.Text = "Tìm kiếm";
-            btnSearch1.UseVisualStyleBackColor = true;
+            BtnSearch1.Location = new Point(1505, 19);
+            BtnSearch1.Name = "BtnSearch1";
+            BtnSearch1.Size = new Size(274, 69);
+            BtnSearch1.TabIndex = 5;
+            BtnSearch1.Text = "Tìm kiếm";
+            BtnSearch1.UseVisualStyleBackColor = true;
+            BtnSearch1.Click += BtnSearch1_Click;
             // 
             // btnDetails1
             // 
@@ -139,14 +140,15 @@
             btnDetails1.Text = "Xem chi tiết";
             btnDetails1.UseVisualStyleBackColor = true;
             // 
-            // btnRefresh1
+            // BtnRefresh1
             // 
-            btnRefresh1.Location = new Point(847, 19);
-            btnRefresh1.Name = "btnRefresh1";
-            btnRefresh1.Size = new Size(270, 69);
-            btnRefresh1.TabIndex = 3;
-            btnRefresh1.Text = "Làm mới";
-            btnRefresh1.UseVisualStyleBackColor = true;
+            BtnRefresh1.Location = new Point(847, 19);
+            BtnRefresh1.Name = "BtnRefresh1";
+            BtnRefresh1.Size = new Size(270, 69);
+            BtnRefresh1.TabIndex = 3;
+            BtnRefresh1.Text = "Làm mới";
+            BtnRefresh1.UseVisualStyleBackColor = true;
+            BtnRefresh1.Click += BtnRefresh1_Click;
             // 
             // btnUpdate1
             // 
@@ -402,9 +404,9 @@
         private TabPage tbUserManage;
         private DataGridView dtgvAccount;
         private Panel panel5;
-        private Button btnSearch1;
+        private Button BtnSearch1;
         private Button btnDetails1;
-        private Button btnRefresh1;
+        private Button BtnRefresh1;
         private Button btnUpdate1;
         private Button btnDelete1;
         private Button btnAdd1;

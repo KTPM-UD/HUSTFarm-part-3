@@ -7,6 +7,9 @@
     <Compile Update="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fTableManager.cs">
       <SubType>Form</SubType>
     </Compile>
