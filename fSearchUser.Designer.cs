@@ -40,9 +40,9 @@
             BtnSearchUser.Font = new Font("Segoe UI", 12F);
             BtnSearchUser.Image = (Image)resources.GetObject("BtnSearchUser.Image");
             BtnSearchUser.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnSearchUser.Location = new Point(0, 30);
+            BtnSearchUser.Location = new Point(305, 128);
             BtnSearchUser.Name = "BtnSearchUser";
-            BtnSearchUser.Size = new Size(270, 71);
+            BtnSearchUser.Size = new Size(270, 74);
             BtnSearchUser.TabIndex = 0;
             BtnSearchUser.Tag = "";
             BtnSearchUser.Text = "Tìm kiếm";
@@ -53,27 +53,27 @@
             // TbUsernameSearch
             // 
             TbUsernameSearch.Font = new Font("Segoe UI", 12F);
-            TbUsernameSearch.Location = new Point(276, 30);
+            TbUsernameSearch.Location = new Point(3, 30);
             TbUsernameSearch.MaxLength = 50;
             TbUsernameSearch.Name = "TbUsernameSearch";
             TbUsernameSearch.PlaceholderText = "Nhập tên đăng nhập";
-            TbUsernameSearch.Size = new Size(625, 71);
+            TbUsernameSearch.Size = new Size(898, 71);
             TbUsernameSearch.TabIndex = 1;
             // 
             // panel1
             // 
             panel1.Controls.Add(BtnSearchUser);
             panel1.Controls.Add(TbUsernameSearch);
-            panel1.Location = new Point(51, 60);
+            panel1.Location = new Point(50, 41);
             panel1.Name = "panel1";
-            panel1.Size = new Size(907, 118);
+            panel1.Size = new Size(907, 223);
             panel1.TabIndex = 2;
             // 
             // fSearchUser
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1001, 226);
+            ClientSize = new Size(1001, 309);
             Controls.Add(panel1);
             Name = "fSearchUser";
             StartPosition = FormStartPosition.CenterScreen;

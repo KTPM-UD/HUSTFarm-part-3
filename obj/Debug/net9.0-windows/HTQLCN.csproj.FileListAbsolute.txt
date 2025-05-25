@@ -74,3 +74,4 @@ D:\Visual STUDIO PROject\HTQLCN\bin\Debug\net9.0-windows\runtimes\win\lib\net9.0
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.csproj.AssemblyReference.cache
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.csproj.Up2Date
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.fSearchUser.resources
+D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.sourcelink.json
