@@ -32,7 +32,7 @@ namespace HTQLCN
 
         void LoadLivestockList()
         {
-            string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] FROM dbo.VatNuoi";
+            string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung FROM dbo.VatNuoi";
 
             dtgvLivestock.DataSource = DataProvider.Instance.ExecuteQuery(query);
             dtgvLivestock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -70,7 +70,8 @@ namespace HTQLCN
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            fSearchLivestock f = new fSearchLivestock(this);
+            f.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)

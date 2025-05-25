@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HTQLCN.DAO
 {
-    internal class LivestockDAO
+    public class LivestockDAO
     {
         string query = "EXEC dbo.USP_GetLivestockByID @IDVatNuoi";
 
