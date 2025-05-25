@@ -24,9 +24,8 @@ namespace HTQLCN
         {
             string query = "SELECT TenHienThi AS [Tên hiển thị], Email FROM dbo.TaiKhoan";
             //query = "EXEC dbo.USP_GetAccountByUserName @tenDangNhap = N'tuank4'";
-            DataProvider provider = new DataProvider();
 
-            dtgvAccount.DataSource = provider.ExecuteQuery(query);
+            dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
             dtgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
         }

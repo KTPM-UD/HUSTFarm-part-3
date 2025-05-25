@@ -29,12 +29,13 @@ namespace HTQLCN
             if (ketQua.Rows.Count > 0)
             {
                 mainForm.LoadAccountToDataGridView(ketQua);
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Không tìm thấy tài khoản với tên đăng nhập: " + tenDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }    
-                this.Close();
+            //this.Close();
         }
     }
 }
