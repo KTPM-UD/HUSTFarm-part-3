@@ -23,9 +23,8 @@ namespace HTQLCN
 
         private void BtnSearchUser_Click(object sender, EventArgs e)
         {
-            AccountDAO accountDAO = new AccountDAO();
             string tenDangNhap = TbUsernameSearch.Text.Trim();
-            DataTable ketQua = accountDAO.GetAccountByUserName(tenDangNhap);
+            DataTable ketQua = AccountDAO.Instance.GetAccountByUserName(tenDangNhap);
             if (ketQua.Rows.Count > 0)
             {
                 mainForm.LoadAccountToDataGridView(ketQua);

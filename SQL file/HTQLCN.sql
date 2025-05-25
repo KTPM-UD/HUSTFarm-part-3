@@ -90,3 +90,13 @@ AS
 BEGIN
 SELECT * FROM dbo.VatNuoi WHERE IDVatNuoi = @IDVatNuoi
 END
+
+GO
+CREATE PROCEDURE USP_Login
+@tenDangNhap NVARCHAR(50), @matKhau VARCHAR(255)
+AS
+BEGIN
+SELECT * FROM dbo.TaiKhoan WHERE TenDangNhap = @tenDangNhap AND MatKhau = @matKhau
+END
+
+GO

@@ -55,9 +55,10 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(489, 377);
+            btnExit.Font = new Font("Segoe UI", 12F);
+            btnExit.Location = new Point(502, 306);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(225, 69);
+            btnExit.Size = new Size(330, 140);
             btnExit.TabIndex = 4;
             btnExit.Text = "Thoát";
             btnExit.UseVisualStyleBackColor = true;
@@ -65,9 +66,10 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(104, 377);
+            btnLogin.Font = new Font("Segoe UI", 12F);
+            btnLogin.Location = new Point(73, 306);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(225, 69);
+            btnLogin.Size = new Size(334, 140);
             btnLogin.TabIndex = 3;
             btnLogin.Text = "Đăng nhập";
             btnLogin.UseVisualStyleBackColor = true;
@@ -77,16 +79,17 @@
             // 
             panel3.Controls.Add(txbPassword);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(16, 185);
+            panel3.Location = new Point(16, 154);
             panel3.Name = "panel3";
-            panel3.Size = new Size(889, 168);
+            panel3.Size = new Size(889, 146);
             panel3.TabIndex = 2;
             // 
             // txbPassword
             // 
-            txbPassword.Location = new Point(415, 32);
+            txbPassword.Font = new Font("Segoe UI", 12F);
+            txbPassword.Location = new Point(415, 11);
             txbPassword.Name = "txbPassword";
-            txbPassword.Size = new Size(416, 55);
+            txbPassword.Size = new Size(416, 71);
             txbPassword.TabIndex = 1;
             txbPassword.UseSystemPasswordChar = true;
             // 
@@ -106,14 +109,15 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(16, 17);
             panel2.Name = "panel2";
-            panel2.Size = new Size(889, 162);
+            panel2.Size = new Size(889, 131);
             panel2.TabIndex = 0;
             // 
             // txbUsername
             // 
-            txbUsername.Location = new Point(415, 24);
+            txbUsername.Font = new Font("Segoe UI", 12F);
+            txbUsername.Location = new Point(415, 11);
             txbUsername.Name = "txbUsername";
-            txbUsername.Size = new Size(416, 55);
+            txbUsername.Size = new Size(416, 71);
             txbUsername.TabIndex = 1;
             // 
             // label1

@@ -15,3 +15,5 @@ INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySin
 VALUES ('GA001', N'Gà', N'Gà Ri', N'C2', N'Đực', '2024-01-10', 2.3);
 INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang)
 VALUES ('DE001', N'Dê', N'Bách Thảo', N'D1', N'Cái', '2023-09-20', 35.7);
+
+SELECT * FROM dbo.TaiKhoan WHERE TenDangNhap = N'tuank4' AND MatKhau = N'2326'
