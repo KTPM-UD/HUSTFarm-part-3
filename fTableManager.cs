@@ -30,6 +30,10 @@ namespace HTQLCN
             dtgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
         }
+        public void LoadAccountToDataGridView(DataTable dt)
+        {
+            dtgvAccount.DataSource = dt;
+        }
 
         private void fTableManager_Load(object sender, EventArgs e)
         {
@@ -86,6 +90,17 @@ namespace HTQLCN
         {
             fUpdateLiveStock f = new fUpdateLiveStock();
             f.ShowDialog();
+        }
+
+        private void BtnSearch1_Click(object sender, EventArgs e)
+        {
+            fSearchUser f = new fSearchUser(this);
+            f.ShowDialog();
+        }
+
+        private void BtnRefresh1_Click(object sender, EventArgs e)
+        {
+            LoadAccountList();
         }
     }
 }
