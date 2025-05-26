@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static HTQLCN.DAO.AccountDAO;
 
 namespace HTQLCN
 {
@@ -19,6 +20,15 @@ namespace HTQLCN
 
             LoadAccountList();
             LoadLivestockList();
+            tBUsernameMain.Text = Session.Username;
+            tBTypeMain.Text = Session.Role;
+            tBTotalMain.Text = Session.TotalLS.ToString();
+            tBID.Text = Session.IDNguoiDung.ToString();
+            if (Session.Role == "Nhân viên")
+            {
+                // Ẩn hoặc xóa tab quản lý người dùng
+                tcQLCN.TabPages.Remove(tbUserManage);
+            }
         }
 
         void LoadAccountList()
