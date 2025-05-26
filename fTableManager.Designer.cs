@@ -434,6 +434,7 @@
             ClientSize = new Size(2430, 1423);
             Controls.Add(tcQLCN);
             Name = "fTableManager";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Hệ thống quản lý chăn nuôi HUSTFarm";
             Load += fTableManager_Load;
             tbUserManage.ResumeLayout(false);

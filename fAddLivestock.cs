@@ -106,5 +106,10 @@ namespace HTQLCN
         {
             this.Close();
         }
+
+        private void fAddLivestock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

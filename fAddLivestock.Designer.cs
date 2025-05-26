@@ -188,7 +188,9 @@
             Controls.Add(button1);
             Controls.Add(button2);
             Name = "fAddLivestock";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form thêm vật nuôi";
+            Load += fAddLivestock_Load;
             ResumeLayout(false);
             PerformLayout();
         }
