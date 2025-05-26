@@ -39,7 +39,7 @@ namespace HTQLCN
                 MessageBox.Show("Cân nặng không hợp lệ!");
                 return;
             }
-
+            string IDNguoiDung = AccountDAO.Session.IDNguoiDung ?? string.Empty;
             string idMoi = textBox5.Text.Trim();
             string tenChuong = textBox6.Text.Trim();
             if (string.IsNullOrWhiteSpace(loai) || string.IsNullOrWhiteSpace(tenGiong) ||
@@ -48,13 +48,21 @@ namespace HTQLCN
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string query = @"INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang )";
+            string query = @"INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang , IDNguoiDung ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang , @IDNguoiDung )";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang
+                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang , IDNguoiDung
             });
-            MessageBox.Show(rows > 0 ? "Thêm thành công!" : "Thêm thất bại!");
+
+            if (rows > 0)
+            {
+                MessageBox.Show("Thêm thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Thêm thất bại!");
+            }
         }
 
         // Khi thay đổi loại => cập nhật ID và tên chuồng

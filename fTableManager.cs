@@ -42,7 +42,7 @@ namespace HTQLCN
 
         void LoadLivestockList()
         {
-            string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung FROM dbo.VatNuoi";
+            string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] FROM dbo.VatNuoi";
 
             dtgvLivestock.DataSource = DataProvider.Instance.ExecuteQuery(query);
             dtgvLivestock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -57,6 +57,67 @@ namespace HTQLCN
             dtgvLivestock.DataSource = dt;
         }
 
+        public void CapNhatTongVatNuoi()
+        {
+            // Cập nhật lại tổng vật nuôi
+            string queryCount = "EXEC USP_TongVatNuoi @idNguoiDung";
+            if(Session.IDNguoiDung == null)
+            {
+                Session.IDNguoiDung = string.Empty;
+                return;
+            }
+            int total = (int)DataProvider.Instance.ExecuteScalar(queryCount, new object[] { Session.IDNguoiDung });
+            Session.TotalLS = total;
+            tBTotalMain.Text = Session.TotalLS.ToString();
+        }
+        private void XoaVatNuoi()
+        {
+            // Kiểm tra có dòng nào được chọn không
+            if (dtgvLivestock.SelectedRows.Count > 0)
+            {
+                // Lấy ID vật nuôi từ dòng được chọn
+                string? idVatNuoi = dtgvLivestock.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
+                string? idid = dtgvLivestock.SelectedRows[0].Cells["ID người dùng"].Value?.ToString();
+
+                // Xác nhận trước khi xóa
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa vật nuôi này?",
+                                                   "Xác nhận xóa",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Thực hiện xóa từ database
+                        string query = "DELETE FROM VatNuoi WHERE IDVatNuoi = @id";
+                        if (string.IsNullOrEmpty(idVatNuoi)) return;
+                        int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idVatNuoi } );
+
+                        if (rowsAffected > 0)
+                        {
+                            // Xóa khỏi DataGridView
+                            dtgvLivestock.Rows.Remove(dtgvLivestock.SelectedRows[0]);
+                            MessageBox.Show("Xóa vật nuôi thành công!");
+
+                            CapNhatTongVatNuoi();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy vật nuôi để xóa!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa vật nuôi: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn vật nuôi cần xóa!");
+            }
+        }
         private void fTableManager_Load(object sender, EventArgs e)
         {
 
@@ -70,12 +131,14 @@ namespace HTQLCN
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            XoaVatNuoi();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             LoadLivestockList();
+            CapNhatTongVatNuoi();
+
         }
 
         private void button6_Click(object sender, EventArgs e)

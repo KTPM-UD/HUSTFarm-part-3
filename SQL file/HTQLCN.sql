@@ -99,7 +99,14 @@ BEGIN
 SELECT * FROM dbo.TaiKhoan tk 
 JOIN dbo.NguoiDung nd ON tk.TenDangNhap = nd.TenDangNhap
 WHERE tk.TenDangNhap = @tenDangNhap AND tk.MatKhau = @matKhau
-
 END
 
 GO
+CREATE PROCEDURE USP_TongVatNuoi
+@idNguoiDung NVARCHAR(50)
+AS
+BEGIN
+SELECT COUNT(*) AS TongVatNuoi 
+FROM VatNuoi
+WHERE IDNguoiDung = @idNguoiDung
+END
