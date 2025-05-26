@@ -96,7 +96,10 @@ CREATE PROCEDURE USP_Login
 @tenDangNhap NVARCHAR(50), @matKhau VARCHAR(255)
 AS
 BEGIN
-SELECT * FROM dbo.TaiKhoan WHERE TenDangNhap = @tenDangNhap AND MatKhau = @matKhau
+SELECT * FROM dbo.TaiKhoan tk 
+JOIN dbo.NguoiDung nd ON tk.TenDangNhap = nd.TenDangNhap
+WHERE tk.TenDangNhap = @tenDangNhap AND tk.MatKhau = @matKhau
+
 END
 
 GO

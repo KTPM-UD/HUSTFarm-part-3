@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace HTQLCN.DAO
 {
@@ -22,6 +23,8 @@ namespace HTQLCN.DAO
             private set { instance = value; }
         }
 
+
+
         private AccountDAO() { }
 
         // SQL query to get account by username
@@ -32,13 +35,45 @@ namespace HTQLCN.DAO
             return DataProvider.Instance.ExecuteQuery(query, new object[] { tenDangNhap });
         }
 
+        public static class Session
+        {
+            public static string? Username { get; set; }
+
+            public static string? Role { get; set; }
+
+            public static int? TotalLS { get; set; } 
+
+            public static string? IDNguoiDung { get; set; }
+
+        }
         public bool Login(string username, string password)
         {
             string query = "EXEC dbo.USP_Login @tenDangNhap , @matKhau";
             
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { username, password });
+            if (result.Rows.Count > 0)
+            {
+                DataRow row = result.Rows[0];
+                Session.Username = username;
 
+                //Phân quyền
+                if (row["LoaiTaiKhoan"].ToString() == "1")
+                {
+                    Session.Role = "Admin";
+                }
+                else
+                {
+                    Session.Role = "Nhân viên";
+                }
+                string idNguoiDung = row["IDNguoiDung"]?.ToString() ?? string.Empty;
+
+                //Lấy tổng số lượng vật nuôi của người dùng
+                string query1 = "SELECT COUNT(*) FROM VatNuoi WHERE IDNguoiDung = @id";
+                int total = (int)DataProvider.Instance.ExecuteScalar(query1, new object[] { idNguoiDung });
+                Session.TotalLS = total;
+                Session.IDNguoiDung = idNguoiDung;
+            }
             return result.Rows.Count > 0;
-        } 
+        }
     }
 }

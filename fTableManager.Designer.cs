@@ -50,6 +50,11 @@
             btnAdd = new Button();
             panel2 = new Panel();
             tbMainScreen = new TabPage();
+            tBID = new TextBox();
+            label6 = new Label();
+            tBTotalMain = new TextBox();
+            tBTypeMain = new TextBox();
+            tBUsernameMain = new TextBox();
             btnSignOut = new Button();
             label5 = new Label();
             label4 = new Label();
@@ -281,6 +286,11 @@
             // 
             // tbMainScreen
             // 
+            tbMainScreen.Controls.Add(tBID);
+            tbMainScreen.Controls.Add(label6);
+            tbMainScreen.Controls.Add(tBTotalMain);
+            tbMainScreen.Controls.Add(tBTypeMain);
+            tbMainScreen.Controls.Add(tBUsernameMain);
             tbMainScreen.Controls.Add(btnSignOut);
             tbMainScreen.Controls.Add(label5);
             tbMainScreen.Controls.Add(label4);
@@ -295,12 +305,58 @@
             tbMainScreen.Text = "Màn hình chính";
             tbMainScreen.UseVisualStyleBackColor = true;
             // 
+            // tBID
+            // 
+            tBID.Font = new Font("Segoe UI", 14F);
+            tBID.Location = new Point(777, 370);
+            tBID.Name = "tBID";
+            tBID.ReadOnly = true;
+            tBID.Size = new Size(458, 82);
+            tBID.TabIndex = 8;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 14F);
+            label6.Location = new Point(201, 378);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 74);
+            label6.TabIndex = 4;
+            label6.Text = "ID:";
+            // 
+            // tBTotalMain
+            // 
+            tBTotalMain.Font = new Font("Segoe UI", 14F);
+            tBTotalMain.Location = new Point(777, 736);
+            tBTotalMain.Name = "tBTotalMain";
+            tBTotalMain.ReadOnly = true;
+            tBTotalMain.Size = new Size(458, 82);
+            tBTotalMain.TabIndex = 10;
+            // 
+            // tBTypeMain
+            // 
+            tBTypeMain.Font = new Font("Segoe UI", 14F);
+            tBTypeMain.Location = new Point(777, 554);
+            tBTypeMain.Name = "tBTypeMain";
+            tBTypeMain.ReadOnly = true;
+            tBTypeMain.Size = new Size(458, 82);
+            tBTypeMain.TabIndex = 9;
+            // 
+            // tBUsernameMain
+            // 
+            tBUsernameMain.Font = new Font("Segoe UI", 14F);
+            tBUsernameMain.Location = new Point(777, 179);
+            tBUsernameMain.Name = "tBUsernameMain";
+            tBUsernameMain.ReadOnly = true;
+            tBUsernameMain.Size = new Size(458, 82);
+            tBUsernameMain.TabIndex = 7;
+            // 
             // btnSignOut
             // 
-            btnSignOut.Location = new Point(201, 750);
+            btnSignOut.Location = new Point(246, 885);
             btnSignOut.Name = "btnSignOut";
             btnSignOut.Size = new Size(353, 119);
-            btnSignOut.TabIndex = 5;
+            btnSignOut.TabIndex = 11;
             btnSignOut.Text = "Đăng xuất";
             btnSignOut.UseVisualStyleBackColor = true;
             btnSignOut.Click += btnSignOut_Click;
@@ -309,10 +365,10 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14F);
-            label5.Location = new Point(201, 374);
+            label5.Location = new Point(201, 562);
             label5.Name = "label5";
             label5.Size = new Size(203, 74);
-            label5.TabIndex = 4;
+            label5.TabIndex = 5;
             label5.Text = "Vai trò:";
             // 
             // label4
@@ -321,20 +377,20 @@
             label4.Font = new Font("Segoe UI", 14F);
             label4.Location = new Point(201, 187);
             label4.Name = "label4";
-            label4.Size = new Size(570, 74);
+            label4.Size = new Size(410, 74);
             label4.TabIndex = 3;
-            label4.Text = "Tên người đăng nhập:";
+            label4.Text = "Tên đăng nhập:";
             label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(795, 43);
+            label3.Location = new Point(626, 39);
             label3.Name = "label3";
-            label3.Size = new Size(826, 86);
+            label3.Size = new Size(1140, 86);
             label3.TabIndex = 2;
-            label3.Text = "Hệ thống quản lý chăn nuôi";
+            label3.Text = "Hệ thống quản lý chăn nuôi HUSTFarm";
             // 
             // label2
             // 
@@ -349,10 +405,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F);
-            label1.Location = new Point(201, 564);
+            label1.Location = new Point(201, 744);
             label1.Name = "label1";
             label1.Size = new Size(458, 74);
-            label1.TabIndex = 0;
+            label1.TabIndex = 6;
             label1.Text = "Tổng số vật nuôi:";
             label1.Click += label1_Click;
             // 
@@ -378,7 +434,7 @@
             ClientSize = new Size(2430, 1423);
             Controls.Add(tcQLCN);
             Name = "fTableManager";
-            Text = "Hệ thống quản lý chăn nuôi";
+            Text = "Hệ thống quản lý chăn nuôi HUSTFarm";
             Load += fTableManager_Load;
             tbUserManage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).EndInit();
@@ -428,5 +484,10 @@
         private Label label3;
         private Label label5;
         private Button btnSignOut;
+        private TextBox tBTotalMain;
+        private TextBox tBTypeMain;
+        private TextBox tBUsernameMain;
+        private TextBox tBID;
+        private Label label6;
     }
 }
