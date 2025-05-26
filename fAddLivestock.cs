@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using HTQLCN.DAO;
 
 namespace HTQLCN
 {
@@ -19,7 +20,7 @@ namespace HTQLCN
         }
 
         // Sự kiện khi bấm nút Lưu
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object? sender, EventArgs e)
         {
             string loai = textBox1.Text.Trim();
             string gioiTinh = textBox2.Text.Trim();
@@ -34,30 +35,17 @@ namespace HTQLCN
 
             string idMoi = textBox5.Text.Trim();
             string tenChuong = textBox6.Text.Trim();
+            string query = @"INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang )";
 
-            string connectionString = @"Data Source=ADMIN-PC;Initial Catalog=HeThongQuanLyChanNuoi;Integrated Security=True;Trust Server Certificate=True";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                conn.Open();
-                string query = @"INSERT INTO dbo.VatNuoi(IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang)
-                                 VALUES (@id, @loai, @tenGiong, @chuong, @gioiTinh, @ngaySinh, @canNang)";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@id", idMoi);
-                cmd.Parameters.AddWithValue("@loai", loai);
-                cmd.Parameters.AddWithValue("@tenGiong", tenGiong);
-                cmd.Parameters.AddWithValue("@chuong", tenChuong);
-                cmd.Parameters.AddWithValue("@gioiTinh", gioiTinh);
-                cmd.Parameters.AddWithValue("@ngaySinh", ngaySinh);
-                cmd.Parameters.AddWithValue("@canNang", canNang);
-
-                int rows = cmd.ExecuteNonQuery();
-                MessageBox.Show(rows > 0 ? "Thêm thành công!" : "Thêm thất bại!");
-            }
+                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang
+            });
+            MessageBox.Show(rows > 0 ? "Thêm thành công!" : "Thêm thất bại!");
         }
 
         // Khi thay đổi loại => cập nhật ID và tên chuồng
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged(object? sender, EventArgs e)
         {
             string loai = textBox1.Text.Trim();
             string prefix = GetPrefix(loai);
@@ -97,23 +85,26 @@ namespace HTQLCN
         // Hàm tạo ID mới dựa trên prefix
         private string TaoIDMoi(string prefix)
         {
-            string connectionString = @"Data Source=ADMIN-PC;Initial Catalog=HeThongQuanLyChanNuoi;Integrated Security=True;Trust Server Certificate=True";
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string query = "SELECT MAX(IDVatNuoi) FROM VatNuoi WHERE IDVatNuoi LIKE @prefix";
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[] { prefix + "%" });
+
+            if (result == DBNull.Value || result == null)
             {
-                conn.Open();
-                string query = $"SELECT MAX(IDVatNuoi) FROM VatNuoi WHERE IDVatNuoi LIKE '{prefix}%'";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                object result = cmd.ExecuteScalar();
-
-                if (result == DBNull.Value || result == null)
-                {
-                    return prefix + "001";
-                }
-
-                string lastID = result.ToString();
-                int num = int.Parse(lastID.Substring(prefix.Length));
-                return prefix + (num + 1).ToString("D3");
+                return prefix + "001";
             }
+
+            string? lastID = result.ToString();
+            if (string.IsNullOrEmpty(lastID))
+            {
+                return prefix + "001";
+            }
+            int num = int.Parse(lastID.Substring(prefix.Length));
+            return prefix + (num + 1).ToString("D3");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

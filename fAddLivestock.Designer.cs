@@ -35,7 +35,7 @@
             dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
-            // label1 - Loại
+            // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(38, 61);
@@ -44,7 +44,7 @@
             label1.TabIndex = 0;
             label1.Text = "Loại";
             // 
-            // label2 - Giới tính
+            // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(38, 139);
@@ -53,7 +53,7 @@
             label2.TabIndex = 1;
             label2.Text = "Giới tính";
             // 
-            // label3 - Ngày sinh
+            // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(38, 309);
@@ -62,7 +62,7 @@
             label3.TabIndex = 2;
             label3.Text = "Ngày sinh";
             // 
-            // label4 - Cân nặng
+            // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(38, 387);
@@ -71,82 +71,100 @@
             label4.TabIndex = 3;
             label4.Text = "Cân nặng";
             // 
-            // label5 - Tên giống
+            // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(38, 219);
             label5.Name = "label5";
-            label5.Size = new Size(180, 48);
+            label5.Size = new Size(176, 48);
             label5.TabIndex = 4;
             label5.Text = "Tên giống";
             // 
-            // label6 - ID vật nuôi
+            // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(38, 465);
             label6.Name = "label6";
-            label6.Size = new Size(182, 48);
+            label6.Size = new Size(192, 48);
             label6.TabIndex = 5;
             label6.Text = "ID vật nuôi";
             // 
-            // label7 - Tên chuồng
+            // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(38, 543);
             label7.Name = "label7";
-            label7.Size = new Size(200, 48);
+            label7.Size = new Size(203, 48);
             label7.TabIndex = 6;
             label7.Text = "Tên chuồng";
             // 
-            // textBox1 - Loại
+            // textBox1
+            // 
             textBox1.Location = new Point(237, 61);
+            textBox1.Name = "textBox1";
             textBox1.Size = new Size(588, 55);
             textBox1.TabIndex = 7;
             // 
-            // textBox2 - Giới tính
+            // textBox2
+            // 
             textBox2.Location = new Point(237, 139);
+            textBox2.Name = "textBox2";
             textBox2.Size = new Size(588, 55);
             textBox2.TabIndex = 8;
             // 
-            // textBox3 - Tên giống
+            // textBox3
+            // 
             textBox3.Location = new Point(237, 219);
+            textBox3.Name = "textBox3";
             textBox3.Size = new Size(588, 55);
             textBox3.TabIndex = 9;
             // 
-            // textBox4 - Cân nặng
+            // textBox4
+            // 
             textBox4.Location = new Point(237, 387);
+            textBox4.Name = "textBox4";
             textBox4.Size = new Size(588, 55);
             textBox4.TabIndex = 10;
             // 
-            // textBox5 - ID vật nuôi
+            // textBox5
+            // 
             textBox5.Location = new Point(237, 465);
+            textBox5.Name = "textBox5";
             textBox5.Size = new Size(588, 55);
             textBox5.TabIndex = 11;
             // 
-            // textBox6 - Tên chuồng
+            // textBox6
+            // 
             textBox6.Location = new Point(237, 543);
+            textBox6.Name = "textBox6";
             textBox6.Size = new Size(588, 55);
             textBox6.TabIndex = 12;
             // 
-            // dateTimePicker1 - Ngày sinh
-            dateTimePicker1.Location = new Point(237, 309);
-            dateTimePicker1.Size = new Size(588, 55);
-            dateTimePicker1.TabIndex = 13;
+            // button1
             // 
-            // button1 - Lưu
             button1.Location = new Point(76, 630);
+            button1.Name = "button1";
             button1.Size = new Size(225, 69);
-            button1.Text = "Lưu";
             button1.TabIndex = 14;
+            button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2 - Hủy
+            // button2
+            // 
             button2.Location = new Point(438, 630);
+            button2.Name = "button2";
             button2.Size = new Size(225, 69);
-            button2.Text = "Hủy";
             button2.TabIndex = 15;
+            button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = true;
-
+            button2.Click += button2_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(237, 309);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(588, 55);
+            dateTimePicker1.TabIndex = 13;
             // 
             // fAddLivestock
             // 

@@ -23,7 +23,7 @@ namespace HTQLCN
             tBUsernameMain.Text = Session.Username;
             tBTypeMain.Text = Session.Role;
             tBTotalMain.Text = Session.TotalLS.ToString();
-            tBID.Text = Session.IDNguoiDung.ToString();
+            tBID.Text = Session.IDNguoiDung != null ? Session.IDNguoiDung.ToString() : "";
             if (Session.Role == "Nhân viên")
             {
                 // Ẩn hoặc xóa tab quản lý người dùng

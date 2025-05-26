@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HTQLCN.DAO
 {
@@ -99,21 +100,19 @@ namespace HTQLCN.DAO
         }
 
         //Trả về giá trị đầu tiên của câu truy vấn
-        public object ExecuteScalar(string query, object[]? parameters = null)
+        public object ExecuteScalar(string query, object[] parameters)
         {
             object data = 0;
-
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
 
+                // đoạn này thêm tham số nếu có
                 if (parameters != null)
                 {
-                    // Tìm các tham số trong chuỗi query
                     string[] listPara = query.Split(' ');
                     int i = 0;
-
                     foreach (string item in listPara)
                     {
                         if (item.Contains('@'))
@@ -123,13 +122,12 @@ namespace HTQLCN.DAO
                         }
                     }
                 }
-
                 data = command.ExecuteScalar();
+
                 connection.Close();
 
-                //dtgvAccount.DataSource = data;
+                return data;
             }
-            return data;
         }
     }
 }
