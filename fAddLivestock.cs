@@ -17,15 +17,22 @@ namespace HTQLCN
 
             // Gắn sự kiện khi thay đổi loại vật nuôi
             textBox1.TextChanged += textBox1_TextChanged;
+
+            comboBoxGioiTinh.DropDownStyle = ComboBoxStyle.DropDownList; // Không cho nhập tay
         }
 
         // Sự kiện khi bấm nút Lưu
         private void button1_Click(object? sender, EventArgs e)
         {
             string loai = textBox1.Text.Trim();
-            string gioiTinh = textBox2.Text.Trim();
+            string? gioiTinh = comboBoxGioiTinh.SelectedItem?.ToString();
             string tenGiong = textBox3.Text.Trim();
             DateTime ngaySinh = dateTimePicker1.Value;
+            if (string.IsNullOrEmpty(gioiTinh))
+            {
+                MessageBox.Show("Vui lòng chọn giới tính!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (!double.TryParse(textBox4.Text.Trim(), out double canNang))
             {
@@ -35,6 +42,12 @@ namespace HTQLCN
 
             string idMoi = textBox5.Text.Trim();
             string tenChuong = textBox6.Text.Trim();
+            if (string.IsNullOrWhiteSpace(loai) || string.IsNullOrWhiteSpace(tenGiong) ||
+                string.IsNullOrWhiteSpace(tenChuong) || string.IsNullOrWhiteSpace(idMoi))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string query = @"INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang )";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
@@ -110,6 +123,11 @@ namespace HTQLCN
         private void fAddLivestock_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxGioiTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

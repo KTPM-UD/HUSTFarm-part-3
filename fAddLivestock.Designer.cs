@@ -25,7 +25,6 @@
             label6 = new Label();
             label7 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
             textBox5 = new TextBox();
@@ -33,6 +32,7 @@
             button1 = new Button();
             button2 = new Button();
             dateTimePicker1 = new DateTimePicker();
+            comboBoxGioiTinh = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -105,13 +105,6 @@
             textBox1.Size = new Size(588, 55);
             textBox1.TabIndex = 7;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(237, 139);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(588, 55);
-            textBox2.TabIndex = 8;
-            // 
             // textBox3
             // 
             textBox3.Location = new Point(237, 219);
@@ -166,11 +159,22 @@
             dateTimePicker1.Size = new Size(588, 55);
             dateTimePicker1.TabIndex = 13;
             // 
+            // comboBoxGioiTinh
+            // 
+            comboBoxGioiTinh.FormattingEnabled = true;
+            comboBoxGioiTinh.Items.AddRange(new object[] { "Đực", "Cái" });
+            comboBoxGioiTinh.Location = new Point(237, 139);
+            comboBoxGioiTinh.Name = "comboBoxGioiTinh";
+            comboBoxGioiTinh.Size = new Size(363, 56);
+            comboBoxGioiTinh.TabIndex = 16;
+            comboBoxGioiTinh.SelectedIndexChanged += comboBoxGioiTinh_SelectedIndexChanged;
+            // 
             // fAddLivestock
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(877, 750);
+            Controls.Add(comboBoxGioiTinh);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(label3);
@@ -179,7 +183,6 @@
             Controls.Add(label6);
             Controls.Add(label7);
             Controls.Add(textBox1);
-            Controls.Add(textBox2);
             Controls.Add(textBox3);
             Controls.Add(textBox4);
             Controls.Add(textBox5);
@@ -205,7 +208,6 @@
         private Label label6;
         private Label label7;
         private TextBox textBox1;
-        private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private TextBox textBox5;
@@ -213,5 +215,6 @@
         private Button button1;
         private Button button2;
         private DateTimePicker dateTimePicker1;
+        private ComboBox comboBoxGioiTinh;
     }
 }
