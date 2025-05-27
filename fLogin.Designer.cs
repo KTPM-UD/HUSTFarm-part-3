@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnSignUp = new Button();
             btnExit = new Button();
             btnLogin = new Button();
             panel3 = new Panel();
@@ -44,22 +45,34 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnSignUp);
             panel1.Controls.Add(btnExit);
             panel1.Controls.Add(btnLogin);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(918, 460);
+            panel1.Size = new Size(918, 409);
             panel1.TabIndex = 0;
+            // 
+            // btnSignUp
+            // 
+            btnSignUp.Font = new Font("Segoe UI", 12F);
+            btnSignUp.Location = new Point(313, 306);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.Size = new Size(291, 97);
+            btnSignUp.TabIndex = 4;
+            btnSignUp.Text = "Đăng ký";
+            btnSignUp.UseVisualStyleBackColor = true;
+            btnSignUp.Click += btnSignUp_Click;
             // 
             // btnExit
             // 
             btnExit.Font = new Font("Segoe UI", 12F);
-            btnExit.Location = new Point(502, 306);
+            btnExit.Location = new Point(614, 306);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(330, 140);
-            btnExit.TabIndex = 4;
+            btnExit.Size = new Size(291, 97);
+            btnExit.TabIndex = 5;
             btnExit.Text = "Thoát";
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
@@ -67,9 +80,9 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 12F);
-            btnLogin.Location = new Point(73, 306);
+            btnLogin.Location = new Point(16, 306);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(334, 140);
+            btnLogin.Size = new Size(291, 97);
             btnLogin.TabIndex = 3;
             btnLogin.Text = "Đăng nhập";
             btnLogin.UseVisualStyleBackColor = true;
@@ -134,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(947, 489);
+            ClientSize = new Size(938, 427);
             Controls.Add(panel1);
             Name = "fLogin";
             StartPosition = FormStartPosition.CenterScreen;
@@ -160,5 +173,6 @@
         private TextBox txbUsername;
         private Button btnLogin;
         private Button btnExit;
+        private Button btnSignUp;
     }
 }
