@@ -174,8 +174,21 @@ namespace HTQLCN
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            fUpdateLiveStock f = new fUpdateLiveStock();
+            if (dtgvLivestock.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn vật nuôi cần cập nhật");
+                return;
+            }
+
+            DataGridView selectedRow = dtgvLivestock;
+            string? id = selectedRow.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
+
+            // Mở form cập nhật với ID đã chọn
+            fUpdateLiveStock f = new fUpdateLiveStock(selectedRow,this);
             f.ShowDialog();
+
+            // Refresh danh sách sau khi cập nhật
+            LoadLivestockList();
         }
 
         private void BtnSearch1_Click(object sender, EventArgs e)

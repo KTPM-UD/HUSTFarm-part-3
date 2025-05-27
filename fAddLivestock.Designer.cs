@@ -165,7 +165,7 @@
             comboBoxGioiTinh.Items.AddRange(new object[] { "Đực", "Cái" });
             comboBoxGioiTinh.Location = new Point(237, 139);
             comboBoxGioiTinh.Name = "comboBoxGioiTinh";
-            comboBoxGioiTinh.Size = new Size(363, 56);
+            comboBoxGioiTinh.Size = new Size(588, 56);
             comboBoxGioiTinh.TabIndex = 16;
             comboBoxGioiTinh.SelectedIndexChanged += comboBoxGioiTinh_SelectedIndexChanged;
             // 

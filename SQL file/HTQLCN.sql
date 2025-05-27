@@ -21,7 +21,7 @@ CREATE TABLE NguoiDung (
 	CCCD VARCHAR(50) NOT NULL,
     Diachi NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
     TenDangNhap NVARCHAR(50) NOT NULL,
-	CONSTRAINT FK_NguoiDung_TaiKhoan FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap),
+	CONSTRAINT FK_NguoiDung_TaiKhoan FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap) ON UPDATE CASCADE,
 );
 
 -- 3. Bảng Vật nuôi
@@ -34,7 +34,7 @@ CREATE TABLE VatNuoi (
     ngaySinh DATE NOT NULL,
     canNang FLOAT NOT NULL CHECK (canNang > 0),
 	IDNguoiDung VARCHAR(10) NULL, -- Khóa ngoại
-	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung)
+	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung) ON UPDATE CASCADE,
 );
 
 -- 4. Bảng Sức khỏe
@@ -44,7 +44,7 @@ CREATE TABLE SucKhoe (
     ngayKiemTra DATE NOT NULL,
     tinhTrang NVARCHAR(200) NOT NULL,
     ghiChu NVARCHAR(MAX),
-	CONSTRAINT FK_SucKhoe_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi)
+	CONSTRAINT FK_SucKhoe_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi) ON UPDATE CASCADE,
 );
 
 -- 5. Bảng Kho
@@ -61,7 +61,7 @@ CREATE TABLE ThucAnNuocUong (
     soLuong INT NOT NULL CHECK (soLuong >= 0),
     hanSuDung DATE NOT NULL,
 	maKho INT NOT NULL,
-	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho),
+	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho) ON UPDATE CASCADE,
 );
 
 -- 7. Bảng phân phối thức ăn
