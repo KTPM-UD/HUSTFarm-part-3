@@ -17,6 +17,8 @@ namespace HTQLCN
             {
                 fTableManager f = new fTableManager();
                 this.Hide();
+                txbPassword.Clear();
+                txbUsername.Clear();
                 f.ShowDialog();
                 this.Show();
             }
@@ -25,7 +27,7 @@ namespace HTQLCN
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //txbUsername.Focus();
             }
-            
+
         }
 
         bool Login(string userName, string passWord)
@@ -51,6 +53,12 @@ namespace HTQLCN
         private void fLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            fSignUp f = new fSignUp();
+            f.ShowDialog();
         }
     }
 }

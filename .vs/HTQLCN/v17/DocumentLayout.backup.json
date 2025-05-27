@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "D:\\Visual STUDIO PROject\\HTQLCN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\fupdatelivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:fupdatelivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\faddlivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:faddlivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|D:\\Visual STUDIO PROject\\HTQLCN\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|D:\\Visual STUDIO PROject\\HTQLCN\\fupdatelivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:fupdatelivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:fsignup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|d:\\visual studio project\\htqlcn\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|D:\\Visual STUDIO PROject\\HTQLCN\\faddlivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:faddlivestock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|D:\\Visual STUDIO PROject\\HTQLCN\\ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C5EF4E6A-7124-4008-AC61-7C8AD311AC40}|HTQLCN.csproj|solutionrelative:ftablemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,58 +46,82 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fAddLivestock.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fAddLivestock.cs",
-              "RelativeDocumentMoniker": "fAddLivestock.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fAddLivestock.cs*",
-              "RelativeToolTip": "fAddLivestock.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T02:39:45.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fUpdateLiveStock.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fUpdateLiveStock.cs",
-              "RelativeDocumentMoniker": "fUpdateLiveStock.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fUpdateLiveStock.cs*",
-              "RelativeToolTip": "fUpdateLiveStock.cs*",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAewFYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:55:58.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "fUpdateLiveStock.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fUpdateLiveStock.cs",
-              "RelativeDocumentMoniker": "fUpdateLiveStock.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fUpdateLiveStock.cs [Design]*",
-              "RelativeToolTip": "fUpdateLiveStock.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T15:55:51.438Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "fTableManager.cs",
               "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs",
               "RelativeDocumentMoniker": "fTableManager.cs",
               "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs",
               "RelativeToolTip": "fTableManager.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAIA+wLoAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA8wCMAAACLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T16:21:14.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fSignUp.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fSignUp.cs",
+              "RelativeDocumentMoniker": "fSignUp.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fSignUp.cs [Design]",
+              "RelativeToolTip": "fSignUp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T09:00:02.528Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fSignUp.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fSignUp.cs",
+              "RelativeDocumentMoniker": "fSignUp.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fSignUp.cs",
+              "RelativeToolTip": "fSignUp.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAUwF0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T11:49:20.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fLogin.cs",
+              "RelativeDocumentMoniker": "fLogin.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fLogin.cs [Design]",
+              "RelativeToolTip": "fLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T08:50:33.941Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fTableManager.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs",
+              "RelativeDocumentMoniker": "fTableManager.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs [Design]",
+              "RelativeToolTip": "fTableManager.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T22:40:17.247Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fLogin.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fLogin.cs",
+              "RelativeDocumentMoniker": "fLogin.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fLogin.cs",
+              "RelativeToolTip": "fLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T09:34:42.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AccountDAO.cs",
               "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\DAO\\AccountDAO.cs",
               "RelativeDocumentMoniker": "DAO\\AccountDAO.cs",
@@ -105,30 +129,7 @@
               "RelativeToolTip": "DAO\\AccountDAO.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAADwv0MAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T10:14:37.918Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "fAddLivestock.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fAddLivestock.cs",
-              "RelativeDocumentMoniker": "fAddLivestock.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fAddLivestock.cs [Design]",
-              "RelativeToolTip": "fAddLivestock.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T06:04:57.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "fTableManager.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs",
-              "RelativeDocumentMoniker": "fTableManager.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HTQLCN\\fTableManager.cs [Design]",
-              "RelativeToolTip": "fTableManager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T22:40:17.247Z"
+              "WhenOpened": "2025-05-26T10:14:37.918Z"
             }
           ]
         }

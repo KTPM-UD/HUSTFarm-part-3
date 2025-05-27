@@ -33,7 +33,7 @@ namespace HTQLCN
 
         void LoadAccountList()
         {
-            string query = "SELECT TenHienThi AS [Tên hiển thị] , Email FROM dbo.TaiKhoan";
+            string query = "SELECT TenDangNhap AS [Tên đăng nhập] , TenHienThi AS [Tên hiển thị] , Email , LoaiTaiKhoan AS [Loại tài khoản] FROM dbo.TaiKhoan";
 
             dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
             dtgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;

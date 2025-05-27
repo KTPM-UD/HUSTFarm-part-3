@@ -48,7 +48,7 @@ namespace HTQLCN
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string query = @"INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang , IDNguoiDung ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang , @IDNguoiDung )";
+            string query = "INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang , IDNguoiDung ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang , @IDNguoiDung )";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
@@ -86,6 +86,16 @@ namespace HTQLCN
                 case "lợn": return "LON";
                 case "gà": return "GA";
                 case "dê": return "DE";
+                case "cừu": return "CUU";
+                case "ngựa": return "NGUA";
+                case "vịt": return "VIT";
+                case "ngỗng": return "NGONG";
+                case "chim cút": return "CHIMC";
+                case "cá": return "CA";
+                case "tôm": return "TOM";
+                case "cua": return "CUA";
+                case "ếch": return "ECH";
+                case "thỏ": return "THO";
                 default: return "XX";
             }
         }
@@ -96,9 +106,18 @@ namespace HTQLCN
             switch (loai.Trim().ToLower())
             {
                 case "bò": return "A1";
-                case "lợn": return "B3";
+                case "lợn": return "A3";
                 case "gà": return "C2";
-                case "dê": return "D1";
+                case "dê": return "A4";
+                case "ngựa": return "A2";
+                case "vịt": return "C1";
+                case "ngỗng": return "C3";
+                case "chim cút": return "B1";
+                case "cá": return "BN1";
+                case "tôm": return "BN2";
+                case "cua": return "BN3";
+                case "ếch": return "TS1";
+                case "thỏ": return "D1";
                 default: return "Z0";
             }
         }
