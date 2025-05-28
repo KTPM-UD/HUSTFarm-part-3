@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSearchLivestock));
             panel1 = new Panel();
             BtnSearchLivestock = new Button();
             TbLivestockSearch = new TextBox();
@@ -39,7 +38,7 @@
             // 
             panel1.Controls.Add(BtnSearchLivestock);
             panel1.Controls.Add(TbLivestockSearch);
-            panel1.Location = new Point(48, 48);
+            panel1.Location = new Point(38, 23);
             panel1.Name = "panel1";
             panel1.Size = new Size(907, 223);
             panel1.TabIndex = 3;
@@ -47,15 +46,17 @@
             // BtnSearchLivestock
             // 
             BtnSearchLivestock.Font = new Font("Segoe UI", 12F);
-            BtnSearchLivestock.Image = (Image)resources.GetObject("BtnSearchLivestock.Image");
+            BtnSearchLivestock.Image = Properties.Resources.search;
             BtnSearchLivestock.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnSearchLivestock.Location = new Point(305, 128);
+            BtnSearchLivestock.Location = new Point(310, 127);
             BtnSearchLivestock.Name = "BtnSearchLivestock";
-            BtnSearchLivestock.Size = new Size(270, 74);
+            BtnSearchLivestock.Padding = new Padding(20, 0, 0, 0);
+            BtnSearchLivestock.Size = new Size(310, 74);
             BtnSearchLivestock.TabIndex = 0;
             BtnSearchLivestock.Tag = "";
             BtnSearchLivestock.Text = "Tìm kiếm";
-            BtnSearchLivestock.TextAlign = ContentAlignment.MiddleRight;
+            BtnSearchLivestock.TextAlign = ContentAlignment.MiddleLeft;
+            BtnSearchLivestock.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnSearchLivestock.UseVisualStyleBackColor = true;
             BtnSearchLivestock.Click += BtnSearchLivestock_Click;
             // 
@@ -73,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1020, 330);
+            ClientSize = new Size(989, 272);
             Controls.Add(panel1);
             Name = "fSearchLivestock";
             StartPosition = FormStartPosition.CenterScreen;

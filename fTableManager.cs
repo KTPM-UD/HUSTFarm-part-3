@@ -172,7 +172,7 @@ void LoadAccountList()
 
         private void button12_Click(object sender, EventArgs e)
         {
-            fAddUserByAdmin f = new fAddUserByAdmin();
+            fAddUsersByAdmin f = new fAddUsersByAdmin();
             f.ShowDialog();
             LoadAccountList();
         }

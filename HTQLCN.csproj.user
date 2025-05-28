@@ -4,6 +4,9 @@
     <Compile Update="fAddLivestock.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fAddUsersByAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>

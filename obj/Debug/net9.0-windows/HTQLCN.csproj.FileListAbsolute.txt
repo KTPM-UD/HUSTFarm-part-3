@@ -77,3 +77,4 @@ D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.fSearchUser.reso
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.sourcelink.json
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.fSearchLivestock.resources
 D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.fSignUp.resources
+D:\Visual STUDIO PROject\HTQLCN\obj\Debug\net9.0-windows\HTQLCN.fAddUsersByAdmin.resources

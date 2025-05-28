@@ -8,31 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace HTQLCN
 {
-    public partial class fSignUp : Form
+    public partial class fAddUsersByAdmin : Form
     {
-        public fSignUp()
+        public fAddUsersByAdmin()
         {
             InitializeComponent();
-            comboBoxGioiTinhSignUp.DropDownStyle = ComboBoxStyle.DropDownList; // Không cho nhập tay
+            comboBoxGioiTinhAddUser.DropDownStyle = ComboBoxStyle.DropDownList; // Không cho nhập tay
             // Thông tin người dùng
             string idNguoiDung = TaoIDMoi();
-            tBIDSignUp.Text = idNguoiDung; // Hiển thị ID mới trong TextBox
+            tBIDNguoiDungAddUser.Text = idNguoiDung; // Hiển thị ID mới trong TextBox
             string loaiTK = "0"; // Mặc định là người dùng bình thường
-            tBTypeSignUp.Text = loaiTK; // Mặc định là người dùng bình thường
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnCancelSignUp_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            tBLoaiTKAddUser.Text = loaiTK;
         }
 
         private string TaoIDMoi()
@@ -42,7 +31,7 @@ namespace HTQLCN
 
             if (result == DBNull.Value || result == null)
             {
-                return "ND"+ "001";
+                return "ND" + "001";
             }
 
             string? lastID = result.ToString();
@@ -53,22 +42,22 @@ namespace HTQLCN
             int num = int.Parse(lastID.Substring(2));
             return "ND" + (num + 1).ToString("D3");
         }
-        private void BtnSaveSignUp_Click(object sender, EventArgs e)
+        private void BtnSaveAddUser_Click(object sender, EventArgs e)
         {
             // Thông tin tài khoản
-            string tenDangNhap = tBtenDangNhapSignUp.Text.Trim();
-            string tenHienThi = tBDisplayNameSignUp.Text.Trim();
-            string matKhau = tBMatKhauSignUp.Text.Trim();
-            string email = tBEmailSignUp.Text.Trim();
+            string tenDangNhap = tBtenDangNhapAddUser.Text.Trim();
+            string tenHienThi = tBTenHienThiAddUser.Text.Trim();
+            string matKhau = tBMatKhauAddUser.Text.Trim();
+            string email = tBEmailAddUser.Text.Trim();
 
             // Thông tin người dùng
-            string idNguoiDung = tBIDSignUp.Text.Trim();
-            string loaiTK = tBTypeSignUp.Text.Trim();
-            string hoTen = tBHoTenSignUp.Text.Trim();
-            string gioiTinh = comboBoxGioiTinhSignUp.SelectedItem?.ToString() ?? "";
-            DateTime ngaySinh = dateTimePickerSignUp.Value;
-            string cccd = tBCCCDSignUp.Text.Trim();
-            string diaChi = tBDiaChiSignUp.Text.Trim();
+            string idNguoiDung = tBIDNguoiDungAddUser.Text.Trim();
+            string loaiTK = tBLoaiTKAddUser.Text.Trim();
+            string hoTen = tBHoTenAddUser.Text.Trim();
+            string gioiTinh = comboBoxGioiTinhAddUser.SelectedItem?.ToString() ?? "";
+            DateTime ngaySinh = dateTimePickerAddUser.Value;
+            string cccd = tBCCCDAddUser.Text.Trim();
+            string diaChi = tBDiaChiAddUser.Text.Trim();
             // Kiểm tra hợp lệ
             if (string.IsNullOrWhiteSpace(tenDangNhap) || string.IsNullOrWhiteSpace(matKhau) || string.IsNullOrWhiteSpace(email))
             {
@@ -120,6 +109,11 @@ namespace HTQLCN
             {
                 MessageBox.Show("Đăng ký thất bại (Người dùng)!");
             }
+        }
+
+        private void BtnCancelAddUser_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

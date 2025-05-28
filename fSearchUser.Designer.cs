@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSearchUser));
             BtnSearchUser = new Button();
             TbUsernameSearch = new TextBox();
             panel1 = new Panel();
@@ -38,15 +37,17 @@
             // BtnSearchUser
             // 
             BtnSearchUser.Font = new Font("Segoe UI", 12F);
-            BtnSearchUser.Image = (Image)resources.GetObject("BtnSearchUser.Image");
+            BtnSearchUser.Image = Properties.Resources.search;
             BtnSearchUser.ImageAlign = ContentAlignment.MiddleLeft;
             BtnSearchUser.Location = new Point(305, 128);
             BtnSearchUser.Name = "BtnSearchUser";
-            BtnSearchUser.Size = new Size(270, 74);
+            BtnSearchUser.Padding = new Padding(20, 0, 0, 0);
+            BtnSearchUser.Size = new Size(318, 74);
             BtnSearchUser.TabIndex = 0;
             BtnSearchUser.Tag = "";
             BtnSearchUser.Text = "Tìm kiếm";
-            BtnSearchUser.TextAlign = ContentAlignment.MiddleRight;
+            BtnSearchUser.TextAlign = ContentAlignment.MiddleLeft;
+            BtnSearchUser.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnSearchUser.UseVisualStyleBackColor = true;
             BtnSearchUser.Click += BtnSearchUser_Click;
             // 
@@ -64,7 +65,7 @@
             // 
             panel1.Controls.Add(BtnSearchUser);
             panel1.Controls.Add(TbUsernameSearch);
-            panel1.Location = new Point(50, 41);
+            panel1.Location = new Point(46, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(907, 223);
             panel1.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1001, 309);
+            ClientSize = new Size(1001, 247);
             Controls.Add(panel1);
             Name = "fSearchUser";
             StartPosition = FormStartPosition.CenterScreen;
