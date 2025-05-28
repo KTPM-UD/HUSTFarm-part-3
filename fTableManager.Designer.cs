@@ -112,6 +112,7 @@
             dtgvAccount.RowHeadersWidth = 123;
             dtgvAccount.Size = new Size(2373, 1156);
             dtgvAccount.TabIndex = 2;
+
             // 
             // panel5
             // 
@@ -424,14 +425,14 @@
             tcQLCN.Name = "tcQLCN";
             tcQLCN.Padding = new Point(60, 3);
             tcQLCN.SelectedIndex = 0;
-            tcQLCN.Size = new Size(2402, 1394);
+            tcQLCN.Size = new System.Drawing.Size(2500, 1550);
             tcQLCN.TabIndex = 0;
             // 
             // fTableManager
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2430, 1423);
+            ClientSize = new Size(2500, 1600);
             Controls.Add(tcQLCN);
             Name = "fTableManager";
             StartPosition = FormStartPosition.CenterScreen;
