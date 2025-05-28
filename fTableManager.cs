@@ -31,15 +31,28 @@ namespace HTQLCN
             }
         }
 
-        void LoadAccountList()
-        {
-            string query = "SELECT TenDangNhap AS [Tên đăng nhập] , TenHienThi AS [Tên hiển thị] , Email , LoaiTaiKhoan AS [Loại tài khoản] FROM dbo.TaiKhoan";
+void LoadAccountList()
+{
+    string query = @"
+    SELECT 
+        nd.IDNguoiDung AS [ID Người Dùng],
+        nd.HoTen AS [Họ Tên],
+        nd.GioiTinh AS [Giới Tính],
+        nd.NgaySinh AS [Ngày Sinh],
+        nd.CCCD,
+        nd.DiaChi AS [Địa Chỉ],
+        tk.TenDangNhap AS [Tên Đăng Nhập],
+        tk.TenHienThi AS [Tên Hiển Thị],
+        tk.Email,
+        tk.LoaiTaiKhoan AS [Loại Tài Khoản]
+    FROM 
+        TaiKhoan tk
+    JOIN 
+        NguoiDung nd ON tk.TenDangNhap = nd.TenDangNhap";
 
-            dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            dtgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-        }
-
+    dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query);
+    dtgvAccount.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+}
         void LoadLivestockList()
         {
             string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] FROM dbo.VatNuoi";
@@ -61,7 +74,7 @@ namespace HTQLCN
         {
             // Cập nhật lại tổng vật nuôi
             string queryCount = "EXEC USP_TongVatNuoi @idNguoiDung";
-            if(Session.IDNguoiDung == null)
+            if (Session.IDNguoiDung == null)
             {
                 Session.IDNguoiDung = string.Empty;
                 return;
@@ -92,7 +105,7 @@ namespace HTQLCN
                         // Thực hiện xóa từ database
                         string query = "DELETE FROM VatNuoi WHERE IDVatNuoi = @id";
                         if (string.IsNullOrEmpty(idVatNuoi)) return;
-                        int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idVatNuoi } );
+                        int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idVatNuoi });
 
                         if (rowsAffected > 0)
                         {
@@ -159,7 +172,9 @@ namespace HTQLCN
 
         private void button12_Click(object sender, EventArgs e)
         {
-
+            fAddUserByAdmin f = new fAddUserByAdmin();
+            f.ShowDialog();
+            LoadAccountList();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -184,7 +199,7 @@ namespace HTQLCN
             string? id = selectedRow.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
 
             // Mở form cập nhật với ID đã chọn
-            fUpdateLiveStock f = new fUpdateLiveStock(selectedRow,this);
+            fUpdateLiveStock f = new fUpdateLiveStock(selectedRow, this);
             f.ShowDialog();
 
             // Refresh danh sách sau khi cập nhật
@@ -201,5 +216,6 @@ namespace HTQLCN
         {
             LoadAccountList();
         }
+        
     }
 }
