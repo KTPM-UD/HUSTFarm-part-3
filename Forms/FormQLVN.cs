@@ -72,7 +72,6 @@ namespace GiaoDien.Forms
             {
                 // Lấy ID vật nuôi từ dòng được chọn
                 string? idVatNuoi = dtgvLiveStock.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
-                string? idid = dtgvLiveStock.SelectedRows[0].Cells["ID người dùng"].Value?.ToString();
 
                 // Xác nhận trước khi xóa
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa vật nuôi này?",

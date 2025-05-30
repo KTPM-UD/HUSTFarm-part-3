@@ -32,7 +32,6 @@
             btnAddUser = new Button();
             btnDeleteUser = new Button();
             btnUpdateUser = new Button();
-            btnRefreshUser = new Button();
             btnSearchUser = new Button();
             panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dtgvAccount).BeginInit();
@@ -57,7 +56,7 @@
             btnAddUser.Anchor = AnchorStyles.None;
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Font = new Font("Segoe UI", 12F);
-            btnAddUser.Location = new Point(71, 19);
+            btnAddUser.Location = new Point(262, 19);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(182, 86);
             btnAddUser.TabIndex = 1;
@@ -70,43 +69,32 @@
             btnDeleteUser.Anchor = AnchorStyles.None;
             btnDeleteUser.FlatStyle = FlatStyle.Flat;
             btnDeleteUser.Font = new Font("Segoe UI", 12F);
-            btnDeleteUser.Location = new Point(442, 19);
+            btnDeleteUser.Location = new Point(690, 19);
             btnDeleteUser.Name = "btnDeleteUser";
             btnDeleteUser.Size = new Size(138, 86);
             btnDeleteUser.TabIndex = 2;
             btnDeleteUser.Text = "Xóa";
             btnDeleteUser.UseVisualStyleBackColor = true;
+            btnDeleteUser.Click += btnDeleteUser_Click;
             // 
             // btnUpdateUser
             // 
             btnUpdateUser.Anchor = AnchorStyles.None;
             btnUpdateUser.FlatStyle = FlatStyle.Flat;
             btnUpdateUser.Font = new Font("Segoe UI", 12F);
-            btnUpdateUser.Location = new Point(801, 19);
+            btnUpdateUser.Location = new Point(1056, 19);
             btnUpdateUser.Name = "btnUpdateUser";
             btnUpdateUser.Size = new Size(135, 86);
             btnUpdateUser.TabIndex = 3;
             btnUpdateUser.Text = "Sửa";
             btnUpdateUser.UseVisualStyleBackColor = true;
             // 
-            // btnRefreshUser
-            // 
-            btnRefreshUser.Anchor = AnchorStyles.None;
-            btnRefreshUser.FlatStyle = FlatStyle.Flat;
-            btnRefreshUser.Font = new Font("Segoe UI", 12F);
-            btnRefreshUser.Location = new Point(1152, 19);
-            btnRefreshUser.Name = "btnRefreshUser";
-            btnRefreshUser.Size = new Size(256, 86);
-            btnRefreshUser.TabIndex = 4;
-            btnRefreshUser.Text = "Làm mới";
-            btnRefreshUser.UseVisualStyleBackColor = true;
-            // 
             // btnSearchUser
             // 
             btnSearchUser.Anchor = AnchorStyles.None;
             btnSearchUser.FlatStyle = FlatStyle.Flat;
             btnSearchUser.Font = new Font("Segoe UI", 12F);
-            btnSearchUser.Location = new Point(1594, 19);
+            btnSearchUser.Location = new Point(1406, 19);
             btnSearchUser.Name = "btnSearchUser";
             btnSearchUser.Size = new Size(270, 86);
             btnSearchUser.TabIndex = 5;
@@ -118,7 +106,6 @@
             panel1.Controls.Add(btnAddUser);
             panel1.Controls.Add(btnSearchUser);
             panel1.Controls.Add(btnDeleteUser);
-            panel1.Controls.Add(btnRefreshUser);
             panel1.Controls.Add(btnUpdateUser);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -147,7 +134,6 @@
         private Button btnAddUser;
         private Button btnDeleteUser;
         private Button btnUpdateUser;
-        private Button btnRefreshUser;
         private Button btnSearchUser;
         private Panel panel1;
     }

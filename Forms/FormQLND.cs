@@ -78,5 +78,55 @@ namespace GiaoDien.Forms
             form.ShowDialog();
             LoadAccountList();
         }
+
+        private void XoaNguoiDung()
+        {
+            // Kiểm tra có dòng nào được chọn không
+            if (dtgvAccount.SelectedRows.Count > 0)
+            {
+                // Lấy ID người dùng từ dòng được chọn
+                string? idNguoiDung = dtgvAccount.SelectedRows[0].Cells["ID người dùng"].Value?.ToString();
+
+                // Xác nhận trước khi xóa
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa người dùng này?",
+                                                   "Xác nhận xóa",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Thực hiện xóa từ database
+                        string query = "DELETE FROM NguoiDung WHERE IDNguoiDung = @id";
+                        if (string.IsNullOrEmpty(idNguoiDung)) return;
+                        int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idNguoiDung });
+
+                        if (rowsAffected > 0)
+                        {
+                            // Xóa khỏi DataGridView
+                            dtgvAccount.Rows.Remove(dtgvAccount.SelectedRows[0]);
+                            MessageBox.Show("Xóa người dùng thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy người dùng để xóa!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa người dùng: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn người dùng cần xóa!");
+            }
+        }
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            XoaNguoiDung();
+        }
     }
 }
