@@ -118,19 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="person_add_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\person_add_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warehouse_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\warehouse_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\home_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="groups_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\groups_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\login_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pet_supplies_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\pet_supplies_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logout_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\logout_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crop_16_9_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\crop_16_9_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pets_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\pets_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="warehouse_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\warehouse_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pet_supplies_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\pet_supplies_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\close_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="groups_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\groups_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="disabled_by_default_90dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\disabled_by_default_90dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_60dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\search_60dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

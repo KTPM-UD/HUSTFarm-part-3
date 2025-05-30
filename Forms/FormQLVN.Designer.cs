@@ -28,12 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormQLVN";
+            btnAddLS = new Button();
+            btnSearchLS = new Button();
+            btnDeleteLS = new Button();
+            btnUpdateLS = new Button();
+            panel1 = new Panel();
+            dtgvLiveStock = new DataGridView();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dtgvLiveStock).BeginInit();
+            SuspendLayout();
+            // 
+            // btnAddLS
+            // 
+            btnAddLS.Anchor = AnchorStyles.None;
+            btnAddLS.FlatStyle = FlatStyle.Flat;
+            btnAddLS.Font = new Font("Segoe UI", 12F);
+            btnAddLS.Location = new Point(323, 26);
+            btnAddLS.Name = "btnAddLS";
+            btnAddLS.Size = new Size(182, 86);
+            btnAddLS.TabIndex = 6;
+            btnAddLS.Text = "Thêm";
+            btnAddLS.UseVisualStyleBackColor = true;
+            btnAddLS.Click += btnAddLS_Click;
+            // 
+            // btnSearchLS
+            // 
+            btnSearchLS.Anchor = AnchorStyles.None;
+            btnSearchLS.FlatStyle = FlatStyle.Flat;
+            btnSearchLS.Font = new Font("Segoe UI", 12F);
+            btnSearchLS.Location = new Point(1314, 26);
+            btnSearchLS.Name = "btnSearchLS";
+            btnSearchLS.Size = new Size(270, 86);
+            btnSearchLS.TabIndex = 10;
+            btnSearchLS.Text = "Tìm kiếm";
+            btnSearchLS.UseVisualStyleBackColor = true;
+            btnSearchLS.Click += btnSearchLS_Click;
+            // 
+            // btnDeleteLS
+            // 
+            btnDeleteLS.Anchor = AnchorStyles.None;
+            btnDeleteLS.FlatStyle = FlatStyle.Flat;
+            btnDeleteLS.Font = new Font("Segoe UI", 12F);
+            btnDeleteLS.Location = new Point(670, 26);
+            btnDeleteLS.Name = "btnDeleteLS";
+            btnDeleteLS.Size = new Size(138, 86);
+            btnDeleteLS.TabIndex = 7;
+            btnDeleteLS.Text = "Xóa";
+            btnDeleteLS.UseVisualStyleBackColor = true;
+            btnDeleteLS.Click += btnDeleteLS_Click;
+            // 
+            // btnUpdateLS
+            // 
+            btnUpdateLS.Anchor = AnchorStyles.None;
+            btnUpdateLS.FlatStyle = FlatStyle.Flat;
+            btnUpdateLS.Font = new Font("Segoe UI", 12F);
+            btnUpdateLS.Location = new Point(991, 26);
+            btnUpdateLS.Name = "btnUpdateLS";
+            btnUpdateLS.Size = new Size(135, 86);
+            btnUpdateLS.TabIndex = 8;
+            btnUpdateLS.Text = "Sửa";
+            btnUpdateLS.UseVisualStyleBackColor = true;
+            btnUpdateLS.Click += btnUpdateLS_Click;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btnDeleteLS);
+            panel1.Controls.Add(btnAddLS);
+            panel1.Controls.Add(btnUpdateLS);
+            panel1.Controls.Add(btnSearchLS);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1959, 131);
+            panel1.TabIndex = 11;
+            // 
+            // dtgvLiveStock
+            // 
+            dtgvLiveStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtgvLiveStock.BackgroundColor = SystemColors.Control;
+            dtgvLiveStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvLiveStock.Location = new Point(0, 136);
+            dtgvLiveStock.MaximumSize = new Size(99999, 99999);
+            dtgvLiveStock.MinimumSize = new Size(1954, 1008);
+            dtgvLiveStock.Name = "dtgvLiveStock";
+            dtgvLiveStock.RowHeadersWidth = 123;
+            dtgvLiveStock.Size = new Size(1959, 1052);
+            dtgvLiveStock.TabIndex = 12;
+            // 
+            // FormQLVN
+            // 
+            AutoScaleDimensions = new SizeF(20F, 48F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1959, 1189);
+            Controls.Add(dtgvLiveStock);
+            Controls.Add(panel1);
+            Name = "FormQLVN";
+            Text = "Quản lý vật nuôi";
+            Load += FormQLVN_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dtgvLiveStock).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAddLS;
+        private Button btnSearchLS;
+        private Button btnDeleteLS;
+        private Button btnUpdateLS;
+        private Panel panel1;
+        private DataGridView dtgvLiveStock;
     }
 }

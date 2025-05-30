@@ -63,6 +63,46 @@ namespace GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check {
+            get {
+                object obj = ResourceManager.GetObject("check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_90dp {
+            get {
+                object obj = ResourceManager.GetObject("close_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crop_16_9_90dp {
+            get {
+                object obj = ResourceManager.GetObject("crop_16_9_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disabled_by_default_90dp {
+            get {
+                object obj = ResourceManager.GetObject("disabled_by_default_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap groups_90dp {
             get {
                 object obj = ResourceManager.GetObject("groups_90dp", resourceCulture);
@@ -83,6 +123,36 @@ namespace GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_90dp {
+            get {
+                object obj = ResourceManager.GetObject("login_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_90dp {
+            get {
+                object obj = ResourceManager.GetObject("logout_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person_add_90dp {
+            get {
+                object obj = ResourceManager.GetObject("person_add_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pet_supplies_90dp {
             get {
                 object obj = ResourceManager.GetObject("pet_supplies_90dp", resourceCulture);
@@ -96,6 +166,16 @@ namespace GiaoDien.Properties {
         internal static System.Drawing.Bitmap pets_90dp {
             get {
                 object obj = ResourceManager.GetObject("pets_90dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_60dp {
+            get {
+                object obj = ResourceManager.GetObject("search_60dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
