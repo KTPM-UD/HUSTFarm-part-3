@@ -30,10 +30,20 @@ namespace GiaoDien.Forms
 
         void LoadLivestockList()
         {
-            string query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] FROM dbo.VatNuoi";
+            string query = "";
 
-            dtgvLiveStock.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            dtgvLiveStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            if (Session.Role == "1")
+            {
+                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] FROM dbo.VatNuoi";
+                dtgvLiveStock.DataSource = DataProvider.Instance.ExecuteQuery(query);
+                dtgvLiveStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+            else
+            {
+                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] FROM VatNuoi WHERE IDNguoiDung = @IDNguoiDung";
+                dtgvLiveStock.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] { Session.IDNguoiDung! } );
+                dtgvLiveStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
         }
 
         private void ApplyThemeToControls(Control.ControlCollection controls)
