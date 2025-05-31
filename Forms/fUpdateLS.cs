@@ -71,7 +71,7 @@ namespace GiaoDien.Forms
             string idMoi = tbIDVatNuoiUpdateLS.Text.Trim();
             string tenChuong = tbChuongUpdateLS.Text.Trim();
             if (string.IsNullOrWhiteSpace(loai) || string.IsNullOrWhiteSpace(tenGiong) ||
-                string.IsNullOrWhiteSpace(tenChuong) || string.IsNullOrWhiteSpace(idMoi))
+                string.IsNullOrWhiteSpace(tenChuong) || string.IsNullOrWhiteSpace(idMoi) || string.IsNullOrWhiteSpace(idNguoiDung))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -80,18 +80,18 @@ namespace GiaoDien.Forms
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang , idNguoiDung, idCu
+                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang , idNguoiDung , idCu
             });
 
             if (rows > 0)
             {
-                MessageBox.Show("Cập nhật thành công!");
+                MessageBox.Show("Cập nhật vật nuôi thành công!");
                 this.fManager.ReloadTotalLS();
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại!");
+                MessageBox.Show("Cập nhật vật nuôi thất bại!");
             }
         }
 

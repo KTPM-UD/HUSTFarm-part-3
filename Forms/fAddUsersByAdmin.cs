@@ -122,7 +122,7 @@ namespace GiaoDien.Forms
             }
             else
             {
-                MessageBox.Show("Đăng ký thất bại!");
+                MessageBox.Show("Thêm người dùng thất bại!");
             }
         }
     }

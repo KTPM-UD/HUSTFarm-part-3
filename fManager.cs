@@ -88,6 +88,25 @@ namespace GiaoDien
             }
         }
 
+        public void UpdateUserInfo(string username, string role, string idNguoiDung)
+        {
+            Session.Username = username;
+            Session.Role = role;
+            Session.IDNguoiDung = idNguoiDung;
+            tbIDHome.Text = idNguoiDung;
+            tbTypeHome.Text = role == "0" ? "Nhân viên" : "Admin";
+            tbTenDangNhapHome.Text = username;
+            if (role == "0")
+            {
+                // Ẩn hoặc xóa tab quản lý người dùng
+                BtnUsers.Visible = false;
+                Reset(); // Reset các nút và tiêu đề về mặc định
+            }
+            else
+            {
+                BtnUsers.Visible = true; // Hiển thị tab quản lý người dùng nếu là admin
+            }
+        }
         public void SuccessSignUp()
         {
             btnLogin.PerformClick();
@@ -187,7 +206,7 @@ namespace GiaoDien
 
         private void BtnUsers_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormQLND(), sender);
+            OpenChildForm(new FormQLND(this), sender);
 
         }
 

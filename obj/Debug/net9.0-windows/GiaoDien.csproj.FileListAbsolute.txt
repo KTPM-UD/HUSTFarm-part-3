@@ -75,3 +75,4 @@ D:\Visual STUDIO PROject\GiaoDien\obj\Debug\net9.0-windows\GiaoDien.Forms.fAddLS
 D:\Visual STUDIO PROject\GiaoDien\obj\Debug\net9.0-windows\GiaoDien.Forms.fUpdateLS.resources
 D:\Visual STUDIO PROject\GiaoDien\obj\Debug\net9.0-windows\GiaoDien.Forms.fSearchLS.resources
 D:\Visual STUDIO PROject\GiaoDien\obj\Debug\net9.0-windows\GiaoDien.Forms.fAddUsersByAdmin.resources
+D:\Visual STUDIO PROject\GiaoDien\obj\Debug\net9.0-windows\GiaoDien.Forms.fUpdateUsers.resources

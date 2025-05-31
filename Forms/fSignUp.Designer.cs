@@ -184,7 +184,7 @@
             BtnConfirmSignUp.Location = new Point(699, 959);
             BtnConfirmSignUp.Name = "BtnConfirmSignUp";
             BtnConfirmSignUp.Size = new Size(531, 113);
-            BtnConfirmSignUp.TabIndex = 11;
+            BtnConfirmSignUp.TabIndex = 8;
             BtnConfirmSignUp.Text = "Xác nhận đăng ký";
             BtnConfirmSignUp.UseVisualStyleBackColor = true;
             BtnConfirmSignUp.Click += BtnConfirmSignUp_Click;
@@ -225,7 +225,7 @@
             tbDiaChiSignUp.Location = new Point(1358, 444);
             tbDiaChiSignUp.Name = "tbDiaChiSignUp";
             tbDiaChiSignUp.Size = new Size(439, 71);
-            tbDiaChiSignUp.TabIndex = 15;
+            tbDiaChiSignUp.TabIndex = 7;
             // 
             // tbCCCDSignUp
             // 
@@ -235,7 +235,7 @@
             tbCCCDSignUp.MaxLength = 12;
             tbCCCDSignUp.Name = "tbCCCDSignUp";
             tbCCCDSignUp.Size = new Size(439, 71);
-            tbCCCDSignUp.TabIndex = 16;
+            tbCCCDSignUp.TabIndex = 6;
             // 
             // tbHoTenSignUp
             // 
@@ -244,7 +244,7 @@
             tbHoTenSignUp.Location = new Point(524, 684);
             tbHoTenSignUp.Name = "tbHoTenSignUp";
             tbHoTenSignUp.Size = new Size(437, 71);
-            tbHoTenSignUp.TabIndex = 17;
+            tbHoTenSignUp.TabIndex = 4;
             // 
             // tbEmailSignUp
             // 
@@ -253,7 +253,7 @@
             tbEmailSignUp.Location = new Point(524, 564);
             tbEmailSignUp.Name = "tbEmailSignUp";
             tbEmailSignUp.Size = new Size(437, 71);
-            tbEmailSignUp.TabIndex = 18;
+            tbEmailSignUp.TabIndex = 3;
             // 
             // tbMatKhauSignUp
             // 
@@ -262,7 +262,7 @@
             tbMatKhauSignUp.Location = new Point(524, 438);
             tbMatKhauSignUp.Name = "tbMatKhauSignUp";
             tbMatKhauSignUp.Size = new Size(437, 71);
-            tbMatKhauSignUp.TabIndex = 19;
+            tbMatKhauSignUp.TabIndex = 2;
             // 
             // tbTenHienThiSignUp
             // 
@@ -271,7 +271,7 @@
             tbTenHienThiSignUp.Location = new Point(524, 329);
             tbTenHienThiSignUp.Name = "tbTenHienThiSignUp";
             tbTenHienThiSignUp.Size = new Size(437, 71);
-            tbTenHienThiSignUp.TabIndex = 20;
+            tbTenHienThiSignUp.TabIndex = 1;
             // 
             // tbTenDangNhapSignUp
             // 
@@ -280,7 +280,7 @@
             tbTenDangNhapSignUp.Location = new Point(524, 204);
             tbTenDangNhapSignUp.Name = "tbTenDangNhapSignUp";
             tbTenDangNhapSignUp.Size = new Size(437, 71);
-            tbTenDangNhapSignUp.TabIndex = 21;
+            tbTenDangNhapSignUp.TabIndex = 0;
             // 
             // comboBoxGioiTinhSignUp
             // 
@@ -291,7 +291,7 @@
             comboBoxGioiTinhSignUp.Location = new Point(1358, 204);
             comboBoxGioiTinhSignUp.Name = "comboBoxGioiTinhSignUp";
             comboBoxGioiTinhSignUp.Size = new Size(437, 73);
-            comboBoxGioiTinhSignUp.TabIndex = 22;
+            comboBoxGioiTinhSignUp.TabIndex = 5;
             // 
             // fSignUp
             // 

@@ -3,19 +3,23 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static GiaoDien.DAO.AccountDAO;
 
 namespace GiaoDien.Forms
 {
     public partial class FormQLND : Form
     {
-        public FormQLND()
+        private fManager fManager;
+        public FormQLND(fManager fManager)
         {
             InitializeComponent();
+            this.fManager = fManager;
         }
 
         private void FormQLND_Load(object sender, EventArgs e)
@@ -62,7 +66,8 @@ namespace GiaoDien.Forms
             tk.TenDangNhap AS [Tên Đăng Nhập] ,
             tk.TenHienThi AS [Tên Hiển Thị] ,
             tk.Email ,
-            tk.LoaiTaiKhoan AS [Loại Tài Khoản]
+            tk.LoaiTaiKhoan AS [Loại Tài Khoản] ,
+            tk.MatKhau AS [Mật Khẩu]
             FROM 
             TaiKhoan tk
             JOIN 
@@ -127,6 +132,29 @@ namespace GiaoDien.Forms
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             XoaNguoiDung();
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+            if (dtgvAccount.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn người dùng cần cập nhật");
+                return;
+            }
+
+            DataGridView selectedRow = dtgvAccount;
+
+            // Mở form cập nhật với ID đã chọn
+            fUpdateUsers f = new fUpdateUsers(dtgvAccount, this.fManager);
+            f.ShowDialog();
+
+            // Refresh danh sách sau khi cập nhật
+            LoadAccountList();
+
+            if (Session.Role == "0")
+            {
+                this.Close();
+            }
         }
     }
 }

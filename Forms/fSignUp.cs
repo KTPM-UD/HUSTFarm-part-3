@@ -146,7 +146,7 @@ namespace GiaoDien.Forms
 
             if (result2 > 0)
             {
-                MessageBox.Show("Đăng ký thành công!");
+                MessageBox.Show("Đăng ký thành công với tên đăng nhập: "+tenDangNhap+" và mật khẩu: "+ matKhau);
                 this.fManager?.SuccessSignUp();
             }
             else

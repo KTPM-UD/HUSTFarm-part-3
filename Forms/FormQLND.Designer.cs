@@ -88,6 +88,7 @@
             btnUpdateUser.TabIndex = 3;
             btnUpdateUser.Text = "Sửa";
             btnUpdateUser.UseVisualStyleBackColor = true;
+            btnUpdateUser.Click += btnUpdateUser_Click;
             // 
             // btnSearchUser
             // 

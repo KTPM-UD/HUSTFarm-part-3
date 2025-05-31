@@ -127,7 +127,6 @@ namespace GiaoDien.Forms
             }
 
             DataGridView selectedRow = dtgvLiveStock;
-            string? id = selectedRow.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
 
             // Mở form cập nhật với ID đã chọn
             fUpdateLS f = new fUpdateLS(selectedRow, this.fManager!);
