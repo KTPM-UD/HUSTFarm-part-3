@@ -76,6 +76,19 @@ namespace GiaoDien.Forms
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (idMoi != idCu)
+            {
+                // Kiểm tra xem id vật nuôi đã tồn tại chưa
+                string checkQuery = "SELECT COUNT(*) FROM dbo.VatNuoi WHERE IDVatNuoi = @idVatNuoi";
+                int count1 = (int)DataProvider.Instance.ExecuteScalar(checkQuery, new object[] { idMoi });
+                if (count1 > 0)
+                {
+                    MessageBox.Show("ID vật nuôi đã tồn tại!");
+                    return;
+                }
+            }
+
             string query = "UPDATE dbo.VatNuoi SET IDVatNuoi = @id , loai = @loai , tenGiong = @tenGiong , tenChuong = @chuong , gioitinh = @gioiTinh , ngaySinh = @ngaySinh , canNang = @canNang , IDNguoiDung = @IDNguoiDung WHERE IDVatNuoi = @idCu";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
