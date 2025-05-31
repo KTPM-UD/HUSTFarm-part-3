@@ -101,6 +101,7 @@
             btnSearchUser.TabIndex = 5;
             btnSearchUser.Text = "Tìm kiếm";
             btnSearchUser.UseVisualStyleBackColor = true;
+            btnSearchUser.Click += btnSearchUser_Click;
             // 
             // panel1
             // 

@@ -28,6 +28,9 @@
     <Compile Update="Forms\fSearchLS.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\fSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\fSignUp.cs">
       <SubType>Form</SubType>
     </Compile>

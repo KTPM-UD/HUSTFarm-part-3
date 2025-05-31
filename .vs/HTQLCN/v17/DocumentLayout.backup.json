@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\Visual STUDIO PROject\\GiaoDien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\dao\\livestockdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:dao\\livestockdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\fsearchls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fsearchls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\fsearchuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fsearchuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\fsearchls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fsearchls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\giaodien\\forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,26 +47,90 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fUpdateLS.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fUpdateLS.cs",
-              "RelativeDocumentMoniker": "Forms\\fUpdateLS.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fUpdateLS.cs",
-              "RelativeToolTip": "Forms\\fUpdateLS.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEcAAAA8AAAAAAAAAA==",
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\DAO\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\AccountDAO.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\DAO\\AccountDAO.cs",
+              "RelativeToolTip": "DAO\\AccountDAO.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T23:37:38.508Z",
+              "WhenOpened": "2025-05-31T04:38:01.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "fUpdateLS.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fUpdateLS.cs",
-              "RelativeDocumentMoniker": "Forms\\fUpdateLS.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fUpdateLS.cs [Design]",
-              "RelativeToolTip": "Forms\\fUpdateLS.cs [Design]",
+              "Title": "LivestockDAO.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\DAO\\LivestockDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\LivestockDAO.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\DAO\\LivestockDAO.cs",
+              "RelativeToolTip": "DAO\\LivestockDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T23:37:35.83Z",
+              "WhenOpened": "2025-05-31T04:37:55.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fSearchLS.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchLS.cs",
+              "RelativeDocumentMoniker": "Forms\\fSearchLS.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchLS.cs",
+              "RelativeToolTip": "Forms\\fSearchLS.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T03:18:46.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fSearchUser.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchUser.cs",
+              "RelativeDocumentMoniker": "Forms\\fSearchUser.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchUser.cs",
+              "RelativeToolTip": "Forms\\fSearchUser.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwB0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T03:18:41.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fSearchLS.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchLS.cs",
+              "RelativeDocumentMoniker": "Forms\\fSearchLS.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\fSearchLS.cs [Design]",
+              "RelativeToolTip": "Forms\\fSearchLS.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T03:17:09.464Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormQLND.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\FormQLND.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\FormQLND.cs",
+              "RelativeToolTip": "Forms\\FormQLND.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAmwKUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T02:53:57.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormQLND.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\FormQLND.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\GiaoDien\\Forms\\FormQLND.cs [Design]",
+              "RelativeToolTip": "Forms\\FormQLND.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T02:08:53.417Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -156,5 +156,14 @@ namespace GiaoDien.Forms
                 this.Close();
             }
         }
+        public void LoadAccountToDataGridView(DataTable dt)
+        {
+            dtgvAccount.DataSource = dt;
+        }
+        private void btnSearchUser_Click(object sender, EventArgs e)
+        {
+            fSearchUser fSearchUser = new fSearchUser(this);
+            fSearchUser.ShowDialog();
+        }
     }
 }

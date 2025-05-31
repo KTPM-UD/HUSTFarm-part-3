@@ -38,7 +38,7 @@
             btnSearchform.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearchform.Image = Properties.Resources.search_60dp;
             btnSearchform.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearchform.Location = new Point(192, 126);
+            btnSearchform.Location = new Point(292, 126);
             btnSearchform.Name = "btnSearchform";
             btnSearchform.Padding = new Padding(20, 0, 0, 0);
             btnSearchform.Size = new Size(322, 81);
@@ -52,10 +52,10 @@
             // 
             tbSearchLS.Anchor = AnchorStyles.None;
             tbSearchLS.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbSearchLS.Location = new Point(49, 25);
+            tbSearchLS.Location = new Point(56, 25);
             tbSearchLS.Name = "tbSearchLS";
             tbSearchLS.PlaceholderText = "Nhập ID vật nuôi";
-            tbSearchLS.Size = new Size(638, 71);
+            tbSearchLS.Size = new Size(821, 71);
             tbSearchLS.TabIndex = 1;
             tbSearchLS.TextChanged += tbSearchLS_TextChanged;
             // 
@@ -63,7 +63,7 @@
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 234);
+            ClientSize = new Size(927, 234);
             Controls.Add(tbSearchLS);
             Controls.Add(btnSearchform);
             Name = "fSearchLS";

@@ -29,6 +29,11 @@ namespace GiaoDien.Forms
         {
             LivestockDAO f = new LivestockDAO();
             string idVatNuoi = tbSearchLS.Text.Trim();
+            if (string.IsNullOrEmpty(idVatNuoi))
+            {
+                MessageBox.Show("Vui lòng nhập id vật nuôi để tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             DataTable ketQua = f.GetLivestockByID(idVatNuoi);
             if (ketQua.Rows.Count > 0)
             {
