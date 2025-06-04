@@ -145,8 +145,10 @@ namespace GiaoDien.Forms
                 {
                     MessageBox.Show("Cập nhật người dùng thành công!");
                 }
-
+                if (this.fManager.checkSession == 1)
+                {
                     this.fManager.UpdateUserInfo(tenDangNhapMoi, loai, idNguoiDungMoi);
+                }
                 this.Close();
             }
             else

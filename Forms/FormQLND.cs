@@ -143,7 +143,11 @@ namespace GiaoDien.Forms
             }
 
             DataGridView selectedRow = dtgvAccount;
-
+            string result = selectedRow.SelectedRows[0].Cells["ID người dùng"].Value?.ToString() ?? string.Empty;
+            if (Session.IDNguoiDung ==result)
+            {
+                this.fManager.checkSession = 1;
+            }
             // Mở form cập nhật với ID đã chọn
             fUpdateUsers f = new fUpdateUsers(dtgvAccount, this.fManager);
             f.ShowDialog();

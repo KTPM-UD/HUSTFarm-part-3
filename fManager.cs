@@ -12,6 +12,7 @@ namespace GiaoDien
         private Random random;
         private int tempIndex;
         private Form? activeForm;
+        public int checkSession=0;
         public fManager()
         {
             InitializeComponent();

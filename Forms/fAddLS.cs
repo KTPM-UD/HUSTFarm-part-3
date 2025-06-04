@@ -53,6 +53,11 @@ namespace GiaoDien.Forms
                 MessageBox.Show("Cân nặng không hợp lệ!");
                 return;
             }
+            else if (canNang <= 0)
+            {
+                MessageBox.Show("Cân nặng phải lớn hơn 0!");
+                return;
+            }
             string IDNguoiDung = AccountDAO.Session.IDNguoiDung ?? string.Empty;
             string idMoi = tbIDVatNuoiLS.Text.Trim();
             string tenChuong = tbChuongLS.Text.Trim();
