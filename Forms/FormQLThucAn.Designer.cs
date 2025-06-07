@@ -32,12 +32,11 @@
             dtgvThucAn.BackgroundColor = SystemColors.Control;
             dtgvThucAn.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvThucAn.Location = new Point(0, 137);
-            dtgvThucAn.MaximumSize = new Size(99999, 99999);
-            dtgvThucAn.MinimumSize = new Size(1954, 1008);
             dtgvThucAn.Name = "dtgvThucAn";
             dtgvThucAn.RowHeadersWidth = 123;
             dtgvThucAn.Size = new Size(1959, 1052);
             dtgvThucAn.TabIndex = 0;
+            dtgvThucAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             // 
             // btnAdd
             // 
@@ -50,8 +49,7 @@
             btnAdd.TabIndex = 1;
             btnAdd.Text = "Thêm";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
-            btnAdd.AutoSize = true;
+            btnAdd.Click += new EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -64,8 +62,7 @@
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Xóa";
             btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
-            btnDelete.AutoSize = true;
+            btnDelete.Click += new EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -78,8 +75,7 @@
             btnUpdate.TabIndex = 3;
             btnUpdate.Text = "Sửa";
             btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
-            btnUpdate.AutoSize = true;
+            btnUpdate.Click += new EventHandler(this.btnUpdate_Click);
             // 
             // btnSearch
             // 
@@ -92,22 +88,20 @@
             btnSearch.TabIndex = 5;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += btnSearch_Click;
-            btnSearch.AutoSize = true;
+            btnSearch.Click += new EventHandler(this.btnSearch_Click);
             // 
             // btnLichSu
             // 
             btnLichSu.Anchor = AnchorStyles.None;
             btnLichSu.FlatStyle = FlatStyle.Flat;
             btnLichSu.Font = new Font("Segoe UI", 12F);
-            btnLichSu.Location = new Point(100, 19);
+            btnLichSu.Location = new Point(-300, 19);
             btnLichSu.Name = "btnLichSu";
-            btnLichSu.Size = new Size(200, 86);
+            btnLichSu.Size = new Size(500, 86);
             btnLichSu.TabIndex = 7;
             btnLichSu.Text = "Lịch sử phân phối";
             btnLichSu.UseVisualStyleBackColor = true;
-            btnLichSu.Click += btnLichSu_Click;
-            btnLichSu.AutoSize = true;
+            btnLichSu.Click += new EventHandler(this.btnLichSu_Click);
             // 
             // btnDistribute
             // 
@@ -120,8 +114,7 @@
             btnDistribute.TabIndex = 6;
             btnDistribute.Text = "Phân phối";
             btnDistribute.UseVisualStyleBackColor = true;
-            btnDistribute.Click += btnDistribute_Click;
-            btnDistribute.AutoSize = true;
+            btnDistribute.Click += new EventHandler(this.btnDistribute_Click);
             // 
             // panel1
             // 
@@ -146,7 +139,8 @@
             Controls.Add(dtgvThucAn);
             Name = "FormQLTANU";
             Text = "Quản lý Thức Ăn & Nước Uống";
-            Load += FormQLTANU_Load;
+            WindowState = FormWindowState.Maximized;
+            Load += new EventHandler(this.FormQLTANU_Load);
             ((System.ComponentModel.ISupportInitialize)dtgvThucAn).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
