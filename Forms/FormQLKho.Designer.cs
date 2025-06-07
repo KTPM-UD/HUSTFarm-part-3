@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
+            this.dtgvKho = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKho)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dtgvKho
+            // 
+            this.dtgvKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvKho.Location = new System.Drawing.Point(30, 30);
+            this.dtgvKho.Name = "dtgvKho";
+            this.dtgvKho.RowHeadersWidth = 62;
+            this.dtgvKho.RowTemplate.Height = 33;
+            this.dtgvKho.Size = new System.Drawing.Size(1000, 400);
+            this.dtgvKho.TabIndex = 0;
+            this.dtgvKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             // 
             // FormQLKho
             // 
-            AutoScaleDimensions = new SizeF(20F, 48F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "FormQLKho";
-            Text = "Quản lý kho";
-            Load += FormQLKho_Load;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtgvKho);
+            this.Name = "FormQLKho";
+            this.Text = "Quản lý kho";
+            this.Load += new System.EventHandler(this.FormQLKho_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvKho)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dtgvKho;
     }
 }

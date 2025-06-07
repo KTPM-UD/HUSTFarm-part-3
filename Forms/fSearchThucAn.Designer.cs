@@ -1,6 +1,6 @@
-﻿namespace GiaoDien.Forms
+namespace GiaoDien.Forms
 {
-    partial class fSearchLS
+    partial class fSearchThucAn
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnSearchform = new Button();
-            tbSearchLS = new TextBox();
+            tbSearchThucAn = new TextBox();
             SuspendLayout();
             // 
             // btnSearchform
@@ -52,27 +52,27 @@
             btnSearchform.AutoSize = true;
             btnSearchform.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             // 
-            // tbSearchLS
+            // tbSearchThucAn
             // 
-            tbSearchLS.Anchor = AnchorStyles.None;
-            tbSearchLS.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbSearchLS.Location = new Point(56, 25);
-            tbSearchLS.Name = "tbSearchLS";
-            tbSearchLS.PlaceholderText = "Nhập ID vật nuôi";
-            tbSearchLS.Size = new Size(821, 71);
-            tbSearchLS.TabIndex = 1;
-            tbSearchLS.TextChanged += tbSearchLS_TextChanged;
+            tbSearchThucAn.Anchor = AnchorStyles.None;
+            tbSearchThucAn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbSearchThucAn.Location = new Point(56, 25);
+            tbSearchThucAn.Name = "tbSearchThucAn";
+            tbSearchThucAn.PlaceholderText = "Nhập ID hoặc tên thức ăn";
+            tbSearchThucAn.Size = new Size(821, 71);
+            tbSearchThucAn.TabIndex = 1;
+            tbSearchThucAn.TextChanged += tbSearchThucAn_TextChanged;
             // 
-            // fSearchLS
+            // fSearchThucAn
             // 
             AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(927, 234);
-            Controls.Add(tbSearchLS);
+            Controls.Add(tbSearchThucAn);
             Controls.Add(btnSearchform);
-            Name = "fSearchLS";
+            Name = "fSearchThucAn";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form tìm kiếm vật nuôi";
+            Text = "Form tìm kiếm thức ăn";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -80,6 +80,6 @@
         #endregion
 
         private Button btnSearchform;
-        private TextBox tbSearchLS;
+        private TextBox tbSearchThucAn;
     }
 }

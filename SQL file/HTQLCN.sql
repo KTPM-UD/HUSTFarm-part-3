@@ -34,6 +34,8 @@ CREATE TABLE VatNuoi (
     ngaySinh DATE NOT NULL,
     canNang FLOAT NOT NULL CHECK (canNang > 0),
 	IDNguoiDung VARCHAR(10) NULL, -- Khóa ngoại
+    tinhTrangSucKhoe NVARCHAR(30) NOT NULL,
+    ghiChu NVARCHAR(100) NULL,
 	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung) ON UPDATE CASCADE,
 );
 
@@ -50,15 +52,16 @@ CREATE TABLE SucKhoe (
 -- 5. Bảng Kho
 CREATE TABLE Kho (
     maKho INT IDENTITY PRIMARY KEY,
-    tenKho NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
+    tenKho NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên'
 );
 
 -- 6. Bảng Thức ăn & nước uống
 CREATE TABLE ThucAnNuocUong (
-    IDThucAn INT NOT NULL PRIMARY KEY,
+    IDThucAn VARCHAR(10) NOT NULL PRIMARY KEY,
     ten NVARCHAR(100) NOT NULL,
     loai NVARCHAR(100) NOT NULL,
     soLuong INT NOT NULL CHECK (soLuong >= 0),
+    donVi NVARCHAR(10),
     hanSuDung DATE NOT NULL,
 	maKho INT NOT NULL,
 	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho) ON UPDATE CASCADE,
@@ -66,17 +69,15 @@ CREATE TABLE ThucAnNuocUong (
 
 -- 7. Bảng phân phối thức ăn
 CREATE TABLE PhanPhoiThucAn (
-	ID INT IDENTITY PRIMARY KEY,
-    IDThucAn INT NOT NULL,
-    IDVatNuoi VARCHAR(10) NOT NULL,
-    ngay DATE NOT NULL,
-    soLuong FLOAT NOT NULL CHECK (soLuong > 0), --donvi kg
-	CONSTRAINT FK_PhanPhoiThucAn_ThucAnNuocUong FOREIGN KEY (IDThucAn) REFERENCES ThucAnNuocUong(IDThucAn) ON DELETE CASCADE,
-	CONSTRAINT FK_PhanPhoiThucAn_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi) ON DELETE CASCADE,
+    ID INT IDENTITY PRIMARY KEY,
+    IDThucAn NVARCHAR(50),
+    soLuong INT NOT NULL CHECK (soLuong >= 0),
+    Chuong NVARCHAR(10),
+    NgayPhanPhoi DATETIME DEFAULT GETDATE()
 );
 GO
-CREATE PROCEDURE USP_GetAccountByUserName
-    @tenDangNhap NVARCHAR(50)
+CREATE PROCEDURE USP_GetAccountByUserID
+    @IDNguoiDung NVARCHAR(50)
 AS
 BEGIN
 SELECT 
@@ -84,7 +85,7 @@ SELECT
     ND.IDNguoiDung, ND.HoTen, ND.gioitinh, ND.NgaySinh, ND.CCCD, ND.Diachi, TK.MatKhau
 FROM TaiKhoan TK
 JOIN NguoiDung ND ON TK.TenDangNhap = ND.TenDangNhap
-WHERE TK.TenDangNhap = @tenDangNhap
+WHERE ND.IDNguoiDung = @IDNguoiDung
 END
 GO
 CREATE PROCEDURE USP_GetLivestockByID
@@ -92,6 +93,26 @@ CREATE PROCEDURE USP_GetLivestockByID
 AS
 BEGIN
 SELECT * FROM dbo.VatNuoi WHERE IDVatNuoi = @IDVatNuoi
+END
+GO
+
+CREATE PROCEDURE USP_GetThucAnByIDorName
+@keyword NVARCHAR(100)
+AS
+BEGIN
+    SELECT 
+        IDThucAn AS [Mã Thức Ăn],
+        ten AS [Tên],
+        loai AS [Loại],
+        soLuong AS [Số Lượng],
+        donVi AS [Đơn Vị],
+        hanSuDung AS [Hạn Sử Dụng],
+        maKho AS [Mã Kho]
+    FROM 
+        ThucAnNuocUong
+    WHERE 
+        IDThucAn LIKE '%' + @keyword + '%'
+        OR ten LIKE '%' + @keyword + '%'
 END
 
 GO
@@ -113,3 +134,8 @@ SELECT COUNT(*) AS TongVatNuoi
 FROM VatNuoi
 WHERE IDNguoiDung = @idNguoiDung
 END
+
+SELECT ID, IDThucAn, soLuong, Chuong, NgayPhanPhoi
+FROM PhanPhoiThucAn
+ORDER BY NgayPhanPhoi DESC
+

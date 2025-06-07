@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using GiaoDien.DAO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
 
 namespace GiaoDien.Forms
 {
     public partial class fAddLS : Form
     {
         private fManager? fManager;
+
         public fAddLS(fManager fManager)
         {
             InitializeComponent();
@@ -25,10 +19,6 @@ namespace GiaoDien.Forms
         public void CapNhatTongVatNuoi()
         {
             this.fManager?.ReloadTotalLS();
-        }
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelAddLS_Click(object sender, EventArgs e)
@@ -42,25 +32,26 @@ namespace GiaoDien.Forms
             string? gioiTinh = comboBoxGioiTinhLS.SelectedItem?.ToString();
             string tenGiong = tbGiongLS.Text.Trim();
             DateTime ngaySinh = dateTimePickerAddLS.Value;
+
+            string tinhTrang = cbTinhTrangSucKhoe.SelectedItem?.ToString() ?? "Tốt";
+            string?ghiChu = string.IsNullOrWhiteSpace(tbGhiChu.Text) ? null : tbGhiChu.Text.Trim();
+
             if (string.IsNullOrEmpty(gioiTinh))
             {
                 MessageBox.Show("Vui lòng chọn giới tính!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!double.TryParse(tbCanNangLS.Text.Trim(), out double canNang))
+            if (!double.TryParse(tbCanNangLS.Text.Trim(), out double canNang) || canNang <= 0)
             {
-                MessageBox.Show("Cân nặng không hợp lệ!");
+                MessageBox.Show("Cân nặng không hợp lệ hoặc nhỏ hơn 0!");
                 return;
             }
-            else if (canNang <= 0)
-            {
-                MessageBox.Show("Cân nặng phải lớn hơn 0!");
-                return;
-            }
+
             string IDNguoiDung = AccountDAO.Session.IDNguoiDung ?? string.Empty;
             string idMoi = tbIDVatNuoiLS.Text.Trim();
-            string tenChuong = tbChuongLS.Text.Trim();
+            string tenChuong = cbChuongLS.Text.Trim();
+
             if (string.IsNullOrWhiteSpace(loai) || string.IsNullOrWhiteSpace(tenGiong) ||
                 string.IsNullOrWhiteSpace(tenChuong) || string.IsNullOrWhiteSpace(idMoi))
             {
@@ -76,11 +67,13 @@ namespace GiaoDien.Forms
                 return;
             }
 
-            string query = "INSERT INTO dbo.VatNuoi ( IDVatNuoi , loai , tenGiong , tenChuong , gioitinh , ngaySinh , canNang , IDNguoiDung ) VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang , @IDNguoiDung )";
+            string query = @"INSERT INTO dbo.VatNuoi 
+                (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) 
+                VALUES (@id, @loai, @tenGiong, @chuong, @gioiTinh, @ngaySinh, @canNang, @IDNguoiDung, @tinhTrang, @ghiChu)";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                idMoi , loai , tenGiong , tenChuong , gioiTinh , ngaySinh , canNang , IDNguoiDung
+                idMoi, loai, tenGiong, tenChuong, gioiTinh, ngaySinh, canNang, IDNguoiDung, tinhTrang, (object?)ghiChu ?? DBNull.Value
             });
 
             if (rows > 0)
@@ -100,19 +93,22 @@ namespace GiaoDien.Forms
             string loai = tbLoaiLS.Text.Trim();
             string prefix = GetPrefix(loai);
             string idMoi = TaoIDMoi(prefix);
-            string chuong = GetChuong(loai);
+            List<string> dsChuong = GetChuong(loai);
 
             tbIDVatNuoiLS.Text = idMoi;
-            tbChuongLS.Text = chuong;
+            cbChuongLS.Items.Clear();
+            cbChuongLS.Items.AddRange(dsChuong.ToArray());
+            cbChuongLS.SelectedIndex = -1;
+            cbChuongLS.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        // Hàm sinh prefix ID theo loại
         private string GetPrefix(string loai)
         {
             switch (loai.Trim().ToLower())
             {
                 case "bò": return "BO";
                 case "lợn": return "LON";
+                case "heo": return "HEO";
                 case "gà": return "GA";
                 case "dê": return "DE";
                 case "trâu": return "TRAU";
@@ -130,31 +126,21 @@ namespace GiaoDien.Forms
             }
         }
 
-        // Hàm lấy tên chuồng theo loại
-        private string GetChuong(string loai)
+        private List<string> GetChuong(string loai)
         {
-            switch (loai.Trim().ToLower())
+            loai = loai.Trim().ToLower();
+
+            return loai switch
             {
-                case "bò": return "A1";
-                case "lợn": return "A3";
-                case "gà": return "C2";
-                case "cừu": return "A5";
-                case "dê": return "A4";
-                case "trâu": return "A6";
-                case "ngựa": return "A2";
-                case "vịt": return "C1";
-                case "ngỗng": return "C3";
-                case "chim cút": return "B1";
-                case "cá": return "BN1";
-                case "tôm": return "BN2";
-                case "cua": return "BN3";
-                case "ếch": return "TS1";
-                case "thỏ": return "D1";
-                default: return "Z0";
-            }
+                "bò" => new List<string> { "B1", "B2" },
+                "dê" => new List<string> { "D1", "D2" },
+                "heo" or "lợn" => new List<string> { "H1", "H2" },
+                "gà" => new List<string> { "G1", "G2" },
+                "vịt" => new List<string> { "V1", "V2" },
+                _ => new List<string> { "Z0" }
+            };
         }
 
-        // Hàm tạo ID mới dựa trên prefix
         private string TaoIDMoi(string prefix)
         {
             string query = "SELECT MAX(IDVatNuoi) FROM VatNuoi WHERE IDVatNuoi LIKE @prefix";
@@ -170,13 +156,20 @@ namespace GiaoDien.Forms
             {
                 return prefix + "001";
             }
+
             int num = int.Parse(lastID.Substring(prefix.Length));
             return prefix + (num + 1).ToString("D3");
         }
 
         private void fAddLS_Load(object sender, EventArgs e)
         {
-            comboBoxGioiTinhLS.DropDownStyle = ComboBoxStyle.DropDownList; // Không cho nhập tay
+            comboBoxGioiTinhLS.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cbTinhTrangSucKhoe.Items.AddRange(new string[] {
+                "Tốt", "Trung Bình", "Yếu", "Bệnh mức 1", "Bệnh mức 2", "Bệnh mức 3", "Đã chết", 
+            });
+            cbTinhTrangSucKhoe.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTinhTrangSucKhoe.SelectedIndex = 0; // mặc định là Tốt
         }
     }
 }

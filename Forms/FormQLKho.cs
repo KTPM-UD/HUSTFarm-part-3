@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using GiaoDien.DAO;
 
 namespace GiaoDien.Forms
 {
@@ -19,7 +14,14 @@ namespace GiaoDien.Forms
 
         private void FormQLKho_Load(object sender, EventArgs e)
         {
+            LoadKho();
+        }
 
+        private void LoadKho()
+        {
+            string query = "SELECT maKho, tenKho FROM Kho ORDER BY maKho ASC";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            dtgvKho.DataSource = dt;
         }
     }
 }

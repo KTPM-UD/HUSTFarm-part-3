@@ -38,7 +38,7 @@
             tbSearchUser.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbSearchUser.Location = new Point(56, 24);
             tbSearchUser.Name = "tbSearchUser";
-            tbSearchUser.PlaceholderText = "Nhập tên đăng nhập";
+            tbSearchUser.PlaceholderText = "Nhập ID người dùng";
             tbSearchUser.Size = new Size(821, 71);
             tbSearchUser.TabIndex = 3;
             // 
@@ -47,6 +47,8 @@
             btnSearchUSER.Anchor = AnchorStyles.None;
             btnSearchUSER.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSearchUSER.Image = Properties.Resources.search_60dp;
+            Bitmap resized = new Bitmap(Properties.Resources.search_60dp, new Size(24, 24));
+            btnSearchUSER.Image = resized;
             btnSearchUSER.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchUSER.Location = new Point(287, 127);
             btnSearchUSER.Name = "btnSearchUSER";
@@ -57,6 +59,9 @@
             btnSearchUSER.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSearchUSER.UseVisualStyleBackColor = true;
             btnSearchUSER.Click += btnSearchUSER_Click;
+            btnSearchUSER.AutoSize = true;
+            btnSearchUSER.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
             // 
             // fSearchUser
             // 

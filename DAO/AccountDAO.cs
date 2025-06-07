@@ -26,11 +26,11 @@ namespace GiaoDien.DAO
         private AccountDAO() { }
 
         // SQL query to get account by username
-        string query = "EXEC dbo.USP_GetAccountByUserName @tenDangNhap";
+        string query = "EXEC dbo.USP_GetAccountByUserID @IDNguoiDung";
 
-        public DataTable GetAccountByUserName(string tenDangNhap)
+        public DataTable GetAccountByUserName(string IDNguoiDung)
         {
-            return DataProvider.Instance.ExecuteQuery(query, new object[] { tenDangNhap });
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { IDNguoiDung });
         }
 
         public static class Session

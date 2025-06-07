@@ -43,52 +43,56 @@
             btnAddLS.Anchor = AnchorStyles.None;
             btnAddLS.FlatStyle = FlatStyle.Flat;
             btnAddLS.Font = new Font("Segoe UI", 12F);
-            btnAddLS.Location = new Point(323, 26);
+            btnAddLS.Location = new Point(350, 19);
             btnAddLS.Name = "btnAddLS";
             btnAddLS.Size = new Size(182, 86);
             btnAddLS.TabIndex = 6;
             btnAddLS.Text = "Thêm";
             btnAddLS.UseVisualStyleBackColor = true;
             btnAddLS.Click += btnAddLS_Click;
+            btnAddLS.AutoSize = true;
             // 
             // btnSearchLS
             // 
             btnSearchLS.Anchor = AnchorStyles.None;
             btnSearchLS.FlatStyle = FlatStyle.Flat;
             btnSearchLS.Font = new Font("Segoe UI", 12F);
-            btnSearchLS.Location = new Point(1314, 26);
+            btnSearchLS.Location = new Point(1314, 19);
             btnSearchLS.Name = "btnSearchLS";
             btnSearchLS.Size = new Size(270, 86);
             btnSearchLS.TabIndex = 10;
             btnSearchLS.Text = "Tìm kiếm";
             btnSearchLS.UseVisualStyleBackColor = true;
             btnSearchLS.Click += btnSearchLS_Click;
+            btnSearchLS.AutoSize = true;
             // 
             // btnDeleteLS
             // 
             btnDeleteLS.Anchor = AnchorStyles.None;
             btnDeleteLS.FlatStyle = FlatStyle.Flat;
             btnDeleteLS.Font = new Font("Segoe UI", 12F);
-            btnDeleteLS.Location = new Point(670, 26);
+            btnDeleteLS.Location = new Point(670, 19);
             btnDeleteLS.Name = "btnDeleteLS";
-            btnDeleteLS.Size = new Size(138, 86);
+            btnDeleteLS.Size = new Size(200, 86);
             btnDeleteLS.TabIndex = 7;
             btnDeleteLS.Text = "Xóa";
             btnDeleteLS.UseVisualStyleBackColor = true;
             btnDeleteLS.Click += btnDeleteLS_Click;
+            btnDeleteLS.AutoSize = true;
             // 
             // btnUpdateLS
             // 
             btnUpdateLS.Anchor = AnchorStyles.None;
             btnUpdateLS.FlatStyle = FlatStyle.Flat;
             btnUpdateLS.Font = new Font("Segoe UI", 12F);
-            btnUpdateLS.Location = new Point(991, 26);
+            btnUpdateLS.Location = new Point(991, 19);
             btnUpdateLS.Name = "btnUpdateLS";
-            btnUpdateLS.Size = new Size(135, 86);
+            btnUpdateLS.Size = new Size(200, 86);
             btnUpdateLS.TabIndex = 8;
             btnUpdateLS.Text = "Sửa";
             btnUpdateLS.UseVisualStyleBackColor = true;
             btnUpdateLS.Click += btnUpdateLS_Click;
+            btnUpdateLS.AutoSize = true;
             // 
             // panel1
             // 

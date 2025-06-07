@@ -22,13 +22,13 @@ namespace GiaoDien.Forms
 
         private void btnSearchUSER_Click(object sender, EventArgs e)
         {
-            string tenDangNhap = tbSearchUser.Text.Trim();
-            if (string.IsNullOrEmpty(tenDangNhap))
+            string IDNguoiDung = tbSearchUser.Text.Trim();
+            if (string.IsNullOrEmpty(IDNguoiDung))
             {
-                MessageBox.Show("Vui lòng nhập tên đăng nhập để tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập ID người dùng để tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            DataTable ketQua = AccountDAO.Instance.GetAccountByUserName(tenDangNhap);
+            DataTable ketQua = AccountDAO.Instance.GetAccountByUserName(IDNguoiDung);
             if (ketQua.Rows.Count > 0)
             {
                 this.fQLND.LoadAccountToDataGridView(ketQua);
@@ -36,7 +36,7 @@ namespace GiaoDien.Forms
             }
             else
             {
-                MessageBox.Show("Không tìm thấy tài khoản với tên đăng nhập: " + tenDangNhap, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Không tìm thấy tài khoản với ID người dùng: " + IDNguoiDung, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

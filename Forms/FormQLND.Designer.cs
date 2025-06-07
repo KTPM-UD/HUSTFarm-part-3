@@ -56,13 +56,14 @@
             btnAddUser.Anchor = AnchorStyles.None;
             btnAddUser.FlatStyle = FlatStyle.Flat;
             btnAddUser.Font = new Font("Segoe UI", 12F);
-            btnAddUser.Location = new Point(262, 19);
+            btnAddUser.Location = new Point(350, 19);
             btnAddUser.Name = "btnAddUser";
             btnAddUser.Size = new Size(182, 86);
             btnAddUser.TabIndex = 1;
             btnAddUser.Text = "Thêm";
             btnAddUser.UseVisualStyleBackColor = true;
             btnAddUser.Click += btnAddUser_Click;
+            btnAddUser.AutoSize = true;
             // 
             // btnDeleteUser
             // 
@@ -71,11 +72,12 @@
             btnDeleteUser.Font = new Font("Segoe UI", 12F);
             btnDeleteUser.Location = new Point(690, 19);
             btnDeleteUser.Name = "btnDeleteUser";
-            btnDeleteUser.Size = new Size(138, 86);
+            btnDeleteUser.Size = new Size(200, 86);
             btnDeleteUser.TabIndex = 2;
             btnDeleteUser.Text = "Xóa";
             btnDeleteUser.UseVisualStyleBackColor = true;
             btnDeleteUser.Click += btnDeleteUser_Click;
+            btnDeleteUser.AutoSize = true;
             // 
             // btnUpdateUser
             // 
@@ -84,11 +86,12 @@
             btnUpdateUser.Font = new Font("Segoe UI", 12F);
             btnUpdateUser.Location = new Point(1056, 19);
             btnUpdateUser.Name = "btnUpdateUser";
-            btnUpdateUser.Size = new Size(135, 86);
+            btnUpdateUser.Size = new Size(200, 86);
             btnUpdateUser.TabIndex = 3;
             btnUpdateUser.Text = "Sửa";
             btnUpdateUser.UseVisualStyleBackColor = true;
             btnUpdateUser.Click += btnUpdateUser_Click;
+            btnUpdateUser.AutoSize = true;
             // 
             // btnSearchUser
             // 
@@ -102,6 +105,7 @@
             btnSearchUser.Text = "Tìm kiếm";
             btnSearchUser.UseVisualStyleBackColor = true;
             btnSearchUser.Click += btnSearchUser_Click;
+            btnSearchUser.AutoSize = true;
             // 
             // panel1
             // 

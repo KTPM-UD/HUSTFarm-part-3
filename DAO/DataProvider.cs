@@ -27,7 +27,7 @@ namespace GiaoDien.DAO
         private DataProvider() { }
 
         //Chuỗi kết nối đến cơ sở dữ liệu
-        private string connectionSTR = @"Data Source=Tuan-PC;Initial Catalog=HeThongQuanLyChanNuoi;Integrated Security=True;Trust Server Certificate=True";
+        private string connectionSTR = @"Data Source=ADMIN-PC;Initial Catalog=HeThongQuanLyChanNuoi;Integrated Security=True;Trust Server Certificate=True";
 
         //Trả về một DataTable từ câu truy vấn
         public DataTable ExecuteQuery(string query, object[]? parameters = null)

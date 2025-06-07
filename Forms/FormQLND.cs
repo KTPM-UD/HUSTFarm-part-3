@@ -134,6 +134,7 @@ namespace GiaoDien.Forms
             XoaNguoiDung();
         }
 
+
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
             if (dtgvAccount.SelectedRows.Count == 0)
@@ -144,7 +145,7 @@ namespace GiaoDien.Forms
 
             DataGridView selectedRow = dtgvAccount;
             string result = selectedRow.SelectedRows[0].Cells["ID người dùng"].Value?.ToString() ?? string.Empty;
-            if (Session.IDNguoiDung ==result)
+            if (Session.IDNguoiDung == result)
             {
                 this.fManager.checkSession = 1;
             }

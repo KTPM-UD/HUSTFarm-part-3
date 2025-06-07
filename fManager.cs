@@ -3,6 +3,8 @@ using GiaoDien.Forms;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using static GiaoDien.DAO.AccountDAO;
+using System.Data;
+
 
 namespace GiaoDien
 {
@@ -12,7 +14,7 @@ namespace GiaoDien
         private Random random;
         private int tempIndex;
         private Form? activeForm;
-        public int checkSession=0;
+        public int checkSession = 0;
         public fManager()
         {
             InitializeComponent();
@@ -213,8 +215,7 @@ namespace GiaoDien
 
         private void BtnFood_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormQLThucAn(), sender);
-
+            OpenChildForm(new FormQLTANU(), sender);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -306,7 +307,7 @@ namespace GiaoDien
             btnLogin.Visible = !display;
             btnSignUp.Visible = !display;
             // Đổi chữ nút thoát thành "Đăng xuất" khi đăng nhập, ngược lại là "Thoát"
-            button3.Text = display ? "Đăng xuất" : "Thoát"; 
+            button3.Text = display ? "Đăng xuất" : "Thoát";
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -348,5 +349,6 @@ namespace GiaoDien
                 e.Cancel = true; // Hủy đóng nếu người dùng bấm Cancel
             }
         }
+
     }
 }
