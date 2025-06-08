@@ -50,6 +50,8 @@
             tbEmailUser = new TextBox();
             comboBoxGioiTinhUser = new ComboBox();
             dateTimePickerUser = new DateTimePicker();
+            dateTimePickerUser.Format = DateTimePickerFormat.Custom;
+            dateTimePickerUser.CustomFormat = "dd/MM/yyyy";
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();
@@ -275,7 +277,7 @@
             dateTimePickerUser.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePickerUser.Location = new Point(376, 507);
             dateTimePickerUser.Name = "dateTimePickerUser";
-            dateTimePickerUser.Size = new Size(754, 71);
+            dateTimePickerUser.Size = new Size(500, 71);
             dateTimePickerUser.TabIndex = 21;
             // 
             // button1

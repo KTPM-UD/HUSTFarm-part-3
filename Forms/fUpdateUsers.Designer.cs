@@ -85,8 +85,10 @@
             dateTimePickerUU.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimePickerUU.Location = new Point(375, 509);
             dateTimePickerUU.Name = "dateTimePickerUU";
-            dateTimePickerUU.Size = new Size(754, 71);
+            dateTimePickerUU.Size = new Size(500, 71);
             dateTimePickerUU.TabIndex = 45;
+            dateTimePickerUU.Format = DateTimePickerFormat.Custom;
+            dateTimePickerUU.CustomFormat = "dd/MM/yyyy";
             // 
             // comboBoxGioiTinhUU
             // 

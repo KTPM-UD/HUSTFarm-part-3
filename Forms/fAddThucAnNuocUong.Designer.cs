@@ -25,6 +25,8 @@ namespace GiaoDien.Forms
             this.cbLoai = new System.Windows.Forms.ComboBox();
             this.tbSoLuong = new System.Windows.Forms.TextBox();
             this.dtpHanSuDung = new System.Windows.Forms.DateTimePicker();
+            this.dtpHanSuDung.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHanSuDung.CustomFormat = "dd/MM/yyyy";
             this.cbMaKho = new System.Windows.Forms.ComboBox();
             this.cbDonVi = new System.Windows.Forms.ComboBox();
 
