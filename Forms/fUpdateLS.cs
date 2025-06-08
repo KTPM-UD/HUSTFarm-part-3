@@ -23,7 +23,7 @@ namespace GiaoDien.Forms
             tbGiongUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Giống"].Value?.ToString();
             cbChuongUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Chuồng"].Value?.ToString();
             comboBoxGioiTinhUpdateLS.SelectedItem = selectedRow.SelectedRows[0].Cells["Giới tính"].Value?.ToString();
-            tbCanNangUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Cân nặng"].Value?.ToString();
+            tbCanNangUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Cân nặng (kg)"].Value?.ToString();
 
             dateTimePickerUpdateLS.Value = Convert.ToDateTime(selectedRow.SelectedRows[0].Cells["Ngày sinh"].Value);
 
