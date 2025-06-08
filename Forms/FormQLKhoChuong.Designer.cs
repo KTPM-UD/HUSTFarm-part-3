@@ -71,7 +71,7 @@
             // 
             this.btnAddChuong = new System.Windows.Forms.Button();
             this.btnAddChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnAddChuong.Location = new System.Drawing.Point(1050, 490); // vị trí tùy chỉnh
+            this.btnAddChuong.Location = new System.Drawing.Point(1050, 490);
             this.btnAddChuong.Name = "btnAddChuong";
             this.btnAddChuong.Size = new System.Drawing.Size(500, 90);
             this.btnAddChuong.Text = "Thêm chuồng";
@@ -82,7 +82,7 @@
             // 
             this.btnDeleteChuong = new System.Windows.Forms.Button();
             this.btnDeleteChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDeleteChuong.Location = new System.Drawing.Point(1050, 600); // vị trí tùy chỉnh
+            this.btnDeleteChuong.Location = new System.Drawing.Point(1050, 600);
             this.btnDeleteChuong.Name = "btnDeleteChuong";
             this.btnDeleteChuong.Size = new System.Drawing.Size(500, 90);
             this.btnDeleteChuong.Text = "Xóa chuồng";
@@ -93,13 +93,48 @@
             // 
             this.btnEditChuong = new System.Windows.Forms.Button();
             this.btnEditChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEditChuong.Location = new System.Drawing.Point(1050, 710); // Vị trí tùy chỉnh
+            this.btnEditChuong.Location = new System.Drawing.Point(1050, 710);
             this.btnEditChuong.Name = "btnEditChuong";
             this.btnEditChuong.Size = new System.Drawing.Size(500, 90);
             this.btnEditChuong.Text = "Sửa chuồng";
             this.btnEditChuong.UseVisualStyleBackColor = true;
             this.btnEditChuong.Click += new System.EventHandler(this.btnEditChuong_Click);
-
+            // 
+            // btnAddKho
+            // 
+            this.btnAddKho = new System.Windows.Forms.Button();
+            this.btnAddKho.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddKho.Location = new System.Drawing.Point(1050, 70);
+            this.btnAddKho.Size = new System.Drawing.Size(500, 90);
+            this.btnAddKho.Name = "btnAddKho";
+            this.btnAddKho.TabIndex = 0;
+            this.btnAddKho.Text = "Thêm kho";
+            this.btnAddKho.UseVisualStyleBackColor = true;
+            this.btnAddKho.Click += new System.EventHandler(this.btnAddKho_Click);
+            //
+            // btn Xóa kho
+            //
+            this.btnDeleteKho = new System.Windows.Forms.Button();
+            this.btnDeleteKho.Text = "Xóa kho";
+            this.btnDeleteKho.Location = new System.Drawing.Point(1050, 180);
+            this.btnDeleteKho.Size = new System.Drawing.Size(500, 90);
+            this.btnDeleteKho.Click += new System.EventHandler(this.btnDeleteKho_Click);
+            this.btnDeleteKho.UseVisualStyleBackColor = true;
+            this.btnDeleteKho.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDeleteKho.Name = "btnDeleteKho";
+            this.btnDeleteKho.TabIndex = 1;
+            // 
+            // btnEditKho
+            // 
+            this.btnEditKho = new System.Windows.Forms.Button();
+            this.btnEditKho.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEditKho.Location = new System.Drawing.Point(1050, 290);
+            this.btnEditKho.Name = "btnEditKho";
+            this.btnEditKho.Size = new System.Drawing.Size(500, 90);
+            this.btnEditKho.TabIndex = 3;
+            this.btnEditKho.Text = "Sửa kho";
+            this.btnEditKho.UseVisualStyleBackColor = true;
+            this.btnEditKho.Click += new System.EventHandler(this.btnEditKho_Click);
             //
             // FormQLKho
             // 
@@ -113,6 +148,9 @@
             this.Controls.Add(this.btnAddChuong);
             this.Controls.Add(this.btnDeleteChuong);
             this.Controls.Add(this.btnEditChuong);
+            this.Controls.Add(this.btnAddKho);
+            this.Controls.Add(this.btnDeleteKho);
+            this.Controls.Add(this.btnEditKho);
             this.Name = "FormQLKho";
             this.Text = "Quản lý kho và chuồng";
             this.Load += new System.EventHandler(this.FormQLKho_Load);
@@ -131,6 +169,11 @@
         private System.Windows.Forms.Button btnAddChuong;
         private System.Windows.Forms.Button btnDeleteChuong;
         private System.Windows.Forms.Button btnEditChuong;
+        private System.Windows.Forms.Button btnAddKho;
+        private System.Windows.Forms.Button btnDeleteKho;
+        private System.Windows.Forms.Button btnEditKho;
+
+
 
 
     }
