@@ -23,7 +23,6 @@ namespace GiaoDien.Forms
 
             // Cấu hình ComboBox "Đơn vị"
             cbDonVi.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbDonVi.Items.AddRange(new string[] { "kg", "g", "lít", "ml", "bao", "chai", "viên", "túi", "thùng" });
         }
 
         // Tự động chọn mã kho theo loại thức ăn
