@@ -67,6 +67,40 @@
             this.dtgvChuong.TabIndex = 1;
             this.dtgvChuong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             // 
+            // btnAddChuong
+            // 
+            this.btnAddChuong = new System.Windows.Forms.Button();
+            this.btnAddChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnAddChuong.Location = new System.Drawing.Point(1050, 490); // vị trí tùy chỉnh
+            this.btnAddChuong.Name = "btnAddChuong";
+            this.btnAddChuong.Size = new System.Drawing.Size(500, 90);
+            this.btnAddChuong.Text = "Thêm chuồng";
+            this.btnAddChuong.UseVisualStyleBackColor = true;
+            btnAddChuong.Click += btnAddChuong_Click;
+            // 
+            // btnDeleteChuong
+            // 
+            this.btnDeleteChuong = new System.Windows.Forms.Button();
+            this.btnDeleteChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDeleteChuong.Location = new System.Drawing.Point(1050, 600); // vị trí tùy chỉnh
+            this.btnDeleteChuong.Name = "btnDeleteChuong";
+            this.btnDeleteChuong.Size = new System.Drawing.Size(500, 90);
+            this.btnDeleteChuong.Text = "Xóa chuồng";
+            this.btnDeleteChuong.UseVisualStyleBackColor = true;
+            this.btnDeleteChuong.Click += new System.EventHandler(this.btnDeleteChuong_Click);
+            // 
+            // btnEditChuong
+            // 
+            this.btnEditChuong = new System.Windows.Forms.Button();
+            this.btnEditChuong.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnEditChuong.Location = new System.Drawing.Point(1050, 710); // Vị trí tùy chỉnh
+            this.btnEditChuong.Name = "btnEditChuong";
+            this.btnEditChuong.Size = new System.Drawing.Size(500, 90);
+            this.btnEditChuong.Text = "Sửa chuồng";
+            this.btnEditChuong.UseVisualStyleBackColor = true;
+            this.btnEditChuong.Click += new System.EventHandler(this.btnEditChuong_Click);
+
+            //
             // FormQLKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
@@ -76,6 +110,9 @@
             this.Controls.Add(this.dtgvKho);
             this.Controls.Add(this.lblTitleChuong);
             this.Controls.Add(this.dtgvChuong);
+            this.Controls.Add(this.btnAddChuong);
+            this.Controls.Add(this.btnDeleteChuong);
+            this.Controls.Add(this.btnEditChuong);
             this.Name = "FormQLKho";
             this.Text = "Quản lý kho và chuồng";
             this.Load += new System.EventHandler(this.FormQLKho_Load);
@@ -91,5 +128,10 @@
         private System.Windows.Forms.DataGridView dtgvChuong;
         private System.Windows.Forms.Label lblTitleKho;
         private System.Windows.Forms.Label lblTitleChuong;
+        private System.Windows.Forms.Button btnAddChuong;
+        private System.Windows.Forms.Button btnDeleteChuong;
+        private System.Windows.Forms.Button btnEditChuong;
+
+
     }
 }

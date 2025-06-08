@@ -193,7 +193,7 @@ namespace GiaoDien
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormQLKho(), sender);
+            OpenChildForm(new FormQLKho(this), sender);
         }
 
         private void BtnMainHome_Click(object sender, EventArgs e)
