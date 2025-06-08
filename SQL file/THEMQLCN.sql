@@ -128,6 +128,17 @@ INSERT INTO Kho (tenKho) VALUES
 INSERT INTO dbo.ThucAnNuocUong (IDThucAn, ten, loai, soLuong, donVi, hanSuDung, maKho) VALUES
 ('TA001', N'Hạt Ngũ Cốc', N'Thức ăn', 243, N'kg', '2026-12-25', 1),
 ('NU001', N'Nước máy', N'Nước uống', 2000, N'lít', '2025-12-25', 2);
+INSERT INTO dbo.Chuong (tenChuong, chuThich) VALUES
+(N'B1', N'Chuồng bò số 1'),
+(N'B2', N'Chuồng bò số 2'),
+(N'D1', N'Chuồng dê số 1'),
+(N'G1', N'Chuồng gà số 1'),
+(N'G2', N'Chuồng gà số 2'),
+(N'H1', N'Chuồng heo số 1'),
+(N'H2', N'Chuồng heo số 2'),
+(N'V1', N'Chuồng vịt số 1'),
+(N'V2', N'Chuồng vịt số 2'),
+(N'Z0', N'Chuồng động vật không xác định');
  
 
 

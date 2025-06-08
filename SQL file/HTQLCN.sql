@@ -39,14 +39,10 @@ CREATE TABLE VatNuoi (
 	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung) ON UPDATE CASCADE,
 );
 
--- 4. Bảng Sức khỏe
-CREATE TABLE SucKhoe (
-    IDSucKhoe INT IDENTITY PRIMARY KEY,
-    IDVatNuoi VARCHAR(10) NOT NULL,
-    ngayKiemTra DATE NOT NULL,
-    tinhTrang NVARCHAR(200) NOT NULL,
-    ghiChu NVARCHAR(MAX),
-	CONSTRAINT FK_SucKhoe_VatNuoi FOREIGN KEY (IDVatNuoi) REFERENCES VatNuoi(IDVatNuoi) ON UPDATE CASCADE,
+-- 4. Bảng chuồng
+CREATE TABLE Chuong (
+    tenChuong NVARCHAR(100) NOT NULL PRIMARY KEY,
+    chuThich NVARCHAR(100) NOT NULL
 );
 
 -- 5. Bảng Kho
