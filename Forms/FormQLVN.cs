@@ -34,13 +34,13 @@ namespace GiaoDien.Forms
 
             if (Session.Role == "1")
             {
-                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] , tinhTrangSucKhoe AS [Tình trạng] , ghiChu AS [Ghi chú] FROM dbo.VatNuoi";
+                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng (kg)] , IDNguoiDung AS [ID người dùng] , tinhTrangSucKhoe AS [Tình trạng] , ghiChu AS [Ghi chú] FROM dbo.VatNuoi";
                 dtgvLiveStock.DataSource = DataProvider.Instance.ExecuteQuery(query);
                 dtgvLiveStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
             else
             {
-                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng] , IDNguoiDung AS [ID người dùng] , tinhTrangSucKhoe AS [Tình trạng] , ghiChu AS [Ghi chú] FROM VatNuoi WHERE IDNguoiDung = @IDNguoiDung";
+                query = "SELECT IDVatNuoi AS [ID vật nuôi] , loai AS [Loại] , tenGiong AS [Giống] , tenChuong AS [Chuồng] , gioitinh AS [Giới tính] , ngaySinh AS [Ngày sinh] , canNang AS [Cân nặng (kg)] , IDNguoiDung AS [ID người dùng] , tinhTrangSucKhoe AS [Tình trạng] , ghiChu AS [Ghi chú] FROM VatNuoi WHERE IDNguoiDung = @IDNguoiDung";
                 dtgvLiveStock.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] { Session.IDNguoiDung! } );
                 dtgvLiveStock.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
