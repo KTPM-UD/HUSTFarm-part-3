@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbChuongUpdateLS = new TextBox();
+            cbChuongUpdateLS = new ComboBox();
             tbIDVatNuoiUpdateLS = new TextBox();
             tbCanNangUpdateLS = new TextBox();
             tbGiongUpdateLS = new TextBox();
@@ -52,11 +52,11 @@
             // 
             // tbChuongUpdateLS
             // 
-            tbChuongUpdateLS.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbChuongUpdateLS.Location = new Point(945, 281);
-            tbChuongUpdateLS.Name = "tbChuongUpdateLS";
-            tbChuongUpdateLS.Size = new Size(300, 71);
-            tbChuongUpdateLS.TabIndex = 39;
+            cbChuongUpdateLS.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbChuongUpdateLS.Location = new Point(945, 281);
+            cbChuongUpdateLS.Name = "tbChuongUpdateLS";
+            cbChuongUpdateLS.Size = new Size(300, 71);
+            cbChuongUpdateLS.TabIndex = 39;
             // 
             // tbIDVatNuoiUpdateLS
             // 
@@ -225,7 +225,7 @@
             ClientSize = new Size(1270, 735);
             Controls.Add(tbIDNguoiDungUpdateLS);
             Controls.Add(label1);
-            Controls.Add(tbChuongUpdateLS);
+            Controls.Add(cbChuongUpdateLS);
             Controls.Add(tbIDVatNuoiUpdateLS);
             Controls.Add(tbCanNangUpdateLS);
             Controls.Add(tbGiongUpdateLS);
@@ -250,7 +250,7 @@
 
         #endregion
 
-        private TextBox tbChuongUpdateLS;
+        private ComboBox cbChuongUpdateLS;
         private TextBox tbIDVatNuoiUpdateLS;
         private TextBox tbCanNangUpdateLS;
         private TextBox tbGiongUpdateLS;

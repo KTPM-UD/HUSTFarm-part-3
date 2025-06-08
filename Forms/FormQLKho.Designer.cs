@@ -77,7 +77,7 @@
             this.Controls.Add(this.lblTitleChuong);
             this.Controls.Add(this.dtgvChuong);
             this.Name = "FormQLKho";
-            this.Text = "Quản lý kho";
+            this.Text = "Quản lý kho và chuồng";
             this.Load += new System.EventHandler(this.FormQLKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChuong)).EndInit();

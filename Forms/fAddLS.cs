@@ -69,7 +69,7 @@ namespace GiaoDien.Forms
 
             string query = @"INSERT INTO dbo.VatNuoi 
                 (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) 
-                VALUES (@id, @loai, @tenGiong, @chuong, @gioiTinh, @ngaySinh, @canNang, @IDNguoiDung, @tinhTrang, @ghiChu)";
+                VALUES ( @id , @loai , @tenGiong , @chuong , @gioiTinh , @ngaySinh , @canNang , @IDNguoiDung , @tinhTrang , @ghiChu )";
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
@@ -93,13 +93,29 @@ namespace GiaoDien.Forms
             string loai = tbLoaiLS.Text.Trim();
             string prefix = GetPrefix(loai);
             string idMoi = TaoIDMoi(prefix);
-            List<string> dsChuong = GetChuong(loai);
-
             tbIDVatNuoiLS.Text = idMoi;
-            cbChuongLS.Items.Clear();
-            cbChuongLS.Items.AddRange(dsChuong.ToArray());
-            cbChuongLS.SelectedIndex = -1;
+
+            if (cbChuongLS.Items.Count == 0)
+            {
+                List<string> dsChuong = GetChuongTuCSDL();
+                cbChuongLS.Items.AddRange(dsChuong.ToArray());
+            }
+
             cbChuongLS.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private List<string> GetChuongTuCSDL()
+        {
+            string query = "SELECT tenChuong FROM Chuong ORDER BY tenChuong ASC";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            List<string> dsChuong = new List<string>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                dsChuong.Add(row["tenChuong"].ToString());
+            }
+
+            return dsChuong;
         }
 
         private string GetPrefix(string loai)
@@ -124,21 +140,6 @@ namespace GiaoDien.Forms
                 case "thỏ": return "THO";
                 default: return "XX";
             }
-        }
-
-        private List<string> GetChuong(string loai)
-        {
-            loai = loai.Trim().ToLower();
-
-            return loai switch
-            {
-                "bò" => new List<string> { "B1", "B2" },
-                "dê" => new List<string> { "D1", "D2" },
-                "heo" or "lợn" => new List<string> { "H1", "H2" },
-                "gà" => new List<string> { "G1", "G2" },
-                "vịt" => new List<string> { "V1", "V2" },
-                _ => new List<string> { "Z0" }
-            };
         }
 
         private string TaoIDMoi(string prefix)

@@ -1,34 +1,35 @@
-﻿using GiaoDien.DAO;
+﻿#nullable disable
+using GiaoDien.DAO;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-#nullable disable
+
 namespace GiaoDien.Forms
 {
     public partial class FormQLTANU : Form
     {
         private fManager fManager;
+
         public FormQLTANU(fManager fManager)
         {
             InitializeComponent();
             this.fManager = fManager;
         }
+
         public FormQLTANU()
         {
             InitializeComponent();
         }
+
         private void FormQLTANU_Load(object sender, EventArgs e)
         {
             LoadTheme();
             LoadThucAnList();
         }
+
+        // ========== Giao diện ==========
 
         private void LoadTheme()
         {
@@ -45,10 +46,13 @@ namespace GiaoDien.Forms
                     btn.ForeColor = Color.White;
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
+
                 if (control.HasChildren)
                     ApplyThemeToControls(control.Controls);
             }
         }
+
+        // ========== Load dữ liệu ==========
 
         public void LoadThucAnList()
         {
@@ -67,6 +71,13 @@ namespace GiaoDien.Forms
             dtgvThucAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        public void LoadThucAnToGrid(DataTable dt)
+        {
+            dtgvThucAn.DataSource = dt;
+        }
+
+        // ========== Sự kiện nút bấm ==========
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             fAddThucAn f = new fAddThucAn();
@@ -76,25 +87,27 @@ namespace GiaoDien.Forms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dtgvThucAn.SelectedRows.Count > 0)
-            {
-                string idThucAn = dtgvThucAn.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
-                if (string.IsNullOrEmpty(idThucAn)) return;
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa thức ăn này?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    string query = "DELETE FROM ThucAnNuocUong WHERE IDThucAn = @id";
-                    int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idThucAn });
-                    if (rows > 0)
-                        MessageBox.Show("Xóa thành công!");
-                    else
-                        MessageBox.Show("Không tìm thấy để xóa!");
-                    LoadThucAnList();
-                }
-            }
-            else
+            if (dtgvThucAn.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn thức ăn cần xóa.");
+                return;
+            }
+
+            string idThucAn = dtgvThucAn.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
+            if (string.IsNullOrEmpty(idThucAn)) return;
+
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa thức ăn này?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                string query = "DELETE FROM ThucAnNuocUong WHERE IDThucAn = @id";
+                int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idThucAn });
+
+                if (rows > 0)
+                    MessageBox.Show("Xóa thành công!");
+                else
+                    MessageBox.Show("Không tìm thấy để xóa!");
+
+                LoadThucAnList();
             }
         }
 
@@ -110,45 +123,44 @@ namespace GiaoDien.Forms
             f.ShowDialog();
             LoadThucAnList();
         }
+
         private void btnLichSu_Click(object sender, EventArgs e)
-  {
+        {
             var lichSuForm = new fLichSuPhanPhoi();
             lichSuForm.ShowDialog();
-      }
-
+        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             fSearchThucAn f = new fSearchThucAn(this);
             f.ShowDialog();
         }
+
         private void btnDistribute_Click(object sender, EventArgs e)
-{
-    if (dtgvThucAn.SelectedRows.Count == 0)
-    {
-        MessageBox.Show("Vui lòng chọn thức ăn để phân phối.");
-        return;
-    }
-
-    var row = dtgvThucAn.SelectedRows[0];
-    string id = row.Cells["Mã Thức Ăn"].Value?.ToString() ?? "";
-    string ten = row.Cells["Tên"].Value?.ToString() ?? "";
-    string donVi = row.Cells["Đơn Vị"].Value?.ToString() ?? "";
-    int soLuong = 0; 
-    if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(donVi) ||
-    !int.TryParse(row.Cells["Số Lượng"].Value?.ToString(), out soLuong))
-{
-    MessageBox.Show("Thông tin thức ăn không hợp lệ.");
-    return;
-}
-
-    var form = new fDistributeThucAn(id, ten, donVi, soLuong);
-    form.ShowDialog();
-    LoadThucAnList();
-}
-        public void LoadThucAnToGrid(DataTable dt)
         {
-            dtgvThucAn.DataSource = dt;
+            if (dtgvThucAn.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn thức ăn để phân phối.");
+                return;
+            }
+
+            var row = dtgvThucAn.SelectedRows[0];
+
+            string id = row.Cells["Mã Thức Ăn"].Value?.ToString() ?? "";
+            string ten = row.Cells["Tên"].Value?.ToString() ?? "";
+            string donVi = row.Cells["Đơn Vị"].Value?.ToString() ?? "";
+            int soLuong = 0;
+
+            if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(donVi) ||
+                !int.TryParse(row.Cells["Số Lượng"].Value?.ToString(), out soLuong))
+            {
+                MessageBox.Show("Thông tin thức ăn không hợp lệ.");
+                return;
+            }
+
+            var form = new fDistributeThucAn(id, ten, donVi, soLuong);
+            form.ShowDialog();
+            LoadThucAnList();
         }
     }
 }

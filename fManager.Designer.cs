@@ -152,7 +152,7 @@
             BtnWareHouse.Padding = new Padding(16, 0, 0, 0);
             BtnWareHouse.Size = new Size(575, 180);
             BtnWareHouse.TabIndex = 104;
-            BtnWareHouse.Text = "Quản lý kho";
+            BtnWareHouse.Text = "Quản lý kho và chuồng";
             BtnWareHouse.TextAlign = ContentAlignment.MiddleLeft;
             BtnWareHouse.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnWareHouse.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             BtnFood.Padding = new Padding(16, 0, 0, 0);
             BtnFood.Size = new Size(575, 180);
             BtnFood.TabIndex = 103;
-            BtnFood.Text = "Quản lý thức ăn";
+            BtnFood.Text = "Quản lý thực phẩm";
             BtnFood.TextAlign = ContentAlignment.MiddleLeft;
             BtnFood.TextImageRelation = TextImageRelation.ImageBeforeText;
             BtnFood.UseVisualStyleBackColor = true;

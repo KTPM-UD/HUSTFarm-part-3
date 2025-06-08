@@ -138,7 +138,7 @@
             Controls.Add(panel1);
             Controls.Add(dtgvThucAn);
             Name = "FormQLTANU";
-            Text = "Quản lý Thức Ăn & Nước Uống";
+            Text = "Quản lý thức ăn, nước uống và thuốc thú y";
             WindowState = FormWindowState.Maximized;
             Load += new EventHandler(this.FormQLTANU_Load);
             ((System.ComponentModel.ISupportInitialize)dtgvThucAn).EndInit();
