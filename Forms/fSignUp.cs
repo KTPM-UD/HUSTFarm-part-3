@@ -15,7 +15,7 @@ namespace GiaoDien.Forms
 {
     public partial class fSignUp : Form
     {
-        private fManager? fManager;
+        private fManager fManager;
         public fSignUp(fManager fManager)
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace GiaoDien.Forms
                 return "ND" + "001";
             }
 
-            string? lastID = result.ToString();
+            string lastID = result.ToString();
             if (string.IsNullOrEmpty(lastID))
             {
                 return "ND" + "001";

@@ -6,7 +6,7 @@ namespace GiaoDien.Forms
 {
     public partial class fUpdateThucAn : Form
     {
-        private string idCu;
+        private string idCu=string.Empty;
         private FormQLTANU formQLTANU;
 
         public fUpdateThucAn(DataGridView selectedRow, FormQLTANU form)
@@ -24,7 +24,7 @@ namespace GiaoDien.Forms
             cbDonVi.Items.AddRange(new string[] { "kg", "g", "lít", "ml", "bao", "chai", "viên", "túi", "thùng" });
 
             // Gán dữ liệu từ dòng được chọn
-            idCu = selectedRow.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
+            string idCu = selectedRow.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
             tbTen.Text = selectedRow.SelectedRows[0].Cells["Tên"].Value?.ToString();
             cbLoai.SelectedItem = selectedRow.SelectedRows[0].Cells["Loại"].Value?.ToString();
             tbSoLuong.Text = selectedRow.SelectedRows[0].Cells["Số Lượng"].Value?.ToString();
@@ -43,9 +43,9 @@ namespace GiaoDien.Forms
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             string ten = tbTen.Text.Trim();
-            string?loai = cbLoai.SelectedItem?.ToString();
-            string?donVi = cbDonVi.SelectedItem?.ToString();
-            string?maKhoStr = cbMaKho.SelectedItem?.ToString();
+            string loai = cbLoai.SelectedItem?.ToString();
+            string donVi = cbDonVi.SelectedItem?.ToString();
+            string maKhoStr = cbMaKho.SelectedItem?.ToString();
             DateTime hanSuDung = dtpHanSuDung.Value;
 
             if (string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(loai) ||

@@ -11,7 +11,7 @@ namespace GiaoDien.DAO
 {
     public class AccountDAO
     {
-        private static AccountDAO? instance;
+        private static AccountDAO instance;
         public static AccountDAO Instance
         {
             get
@@ -35,13 +35,13 @@ namespace GiaoDien.DAO
 
         public static class Session
         {
-            public static string? Username { get; set; }
+            public static string  Username { get; set; }
 
-            public static string? Role { get; set; }
+            public static string  Role { get; set; }
 
-            public static int? TotalLS { get; set; }
+            public static int  TotalLS { get; set; }
 
-            public static string? IDNguoiDung { get; set; }
+            public static string IDNguoiDung { get; set; }
 
         }
         public bool Login(string username, string password)

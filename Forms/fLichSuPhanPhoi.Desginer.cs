@@ -2,7 +2,7 @@ namespace GiaoDien.Forms
 {
     partial class fLichSuPhanPhoi
     {
-        private System.ComponentModel.IContainer components = null;
+        private System.ComponentModel.IContainer components = new System.ComponentModel.Container();
 
         protected override void Dispose(bool disposing)
         {
@@ -45,7 +45,7 @@ namespace GiaoDien.Forms
             this.btnLamMoi.TabIndex = 1;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // btnDong
             // 
@@ -56,7 +56,7 @@ namespace GiaoDien.Forms
             this.btnDong.TabIndex = 2;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            btnDong.Click += btnDong_Click;
             // 
             // fLichSuPhanPhoi
             // 
@@ -78,5 +78,7 @@ namespace GiaoDien.Forms
         private System.Windows.Forms.DataGridView dtgvLichSu;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnDong;
+
+
     }
 }

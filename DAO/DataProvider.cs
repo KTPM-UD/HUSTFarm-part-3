@@ -11,7 +11,7 @@ namespace GiaoDien.DAO
 {
     public class DataProvider
     {
-        private static DataProvider? instance; //Ctrl + R + E: đóng gói
+        private static DataProvider instance; //Ctrl + R + E: đóng gói
         public static DataProvider Instance
         {
             get
@@ -30,7 +30,7 @@ namespace GiaoDien.DAO
         private string connectionSTR = @"Data Source=ADMIN-PC;Initial Catalog=HeThongQuanLyChanNuoi;Integrated Security=True;Trust Server Certificate=True";
 
         //Trả về một DataTable từ câu truy vấn
-        public DataTable ExecuteQuery(string query, object[]? parameters = null)
+        public DataTable ExecuteQuery(string query, object[]  parameters = null)
         {
             DataTable data = new DataTable();
 
@@ -65,7 +65,7 @@ namespace GiaoDien.DAO
         }
 
         //Trả ra số dòng thành công
-        public int ExecuteNonQuery(string query, object[]? parameters = null)
+        public int ExecuteNonQuery(string query, object[]  parameters = null)
         {
             int data = 0;
 

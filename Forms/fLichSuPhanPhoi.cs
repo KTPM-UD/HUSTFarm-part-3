@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using GiaoDien.DAO;
-
+#nullable disable
 namespace GiaoDien.Forms
 {
     public partial class fLichSuPhanPhoi : Form

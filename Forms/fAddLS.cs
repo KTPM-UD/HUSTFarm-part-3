@@ -8,7 +8,7 @@ namespace GiaoDien.Forms
 {
     public partial class fAddLS : Form
     {
-        private fManager? fManager;
+        private fManager fManager;
 
         public fAddLS(fManager fManager)
         {
@@ -29,12 +29,12 @@ namespace GiaoDien.Forms
         private void btnConfirmAddLS_Click(object sender, EventArgs e)
         {
             string loai = tbLoaiLS.Text.Trim();
-            string? gioiTinh = comboBoxGioiTinhLS.SelectedItem?.ToString();
+            string gioiTinh = comboBoxGioiTinhLS.SelectedItem?.ToString();
             string tenGiong = tbGiongLS.Text.Trim();
             DateTime ngaySinh = dateTimePickerAddLS.Value;
 
             string tinhTrang = cbTinhTrangSucKhoe.SelectedItem?.ToString() ?? "Tốt";
-            string?ghiChu = string.IsNullOrWhiteSpace(tbGhiChu.Text) ? null : tbGhiChu.Text.Trim();
+            string ghiChu = string.IsNullOrWhiteSpace(tbGhiChu.Text) ? null : tbGhiChu.Text.Trim();
 
             if (string.IsNullOrEmpty(gioiTinh))
             {
@@ -73,7 +73,7 @@ namespace GiaoDien.Forms
 
             int rows = DataProvider.Instance.ExecuteNonQuery(query, new object[]
             {
-                idMoi, loai, tenGiong, tenChuong, gioiTinh, ngaySinh, canNang, IDNguoiDung, tinhTrang, (object?)ghiChu ?? DBNull.Value
+                idMoi, loai, tenGiong, tenChuong, gioiTinh, ngaySinh, canNang, IDNguoiDung, tinhTrang, (object)ghiChu ?? DBNull.Value
             });
 
             if (rows > 0)
@@ -151,7 +151,7 @@ namespace GiaoDien.Forms
                 return prefix + "001";
             }
 
-            string? lastID = result.ToString();
+            string lastID = result.ToString();
             if (string.IsNullOrEmpty(lastID))
             {
                 return prefix + "001";

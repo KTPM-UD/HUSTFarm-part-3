@@ -90,7 +90,7 @@ namespace GiaoDien.Forms
             if (dtgvAccount.SelectedRows.Count > 0)
             {
                 // Lấy ID người dùng từ dòng được chọn
-                string? idNguoiDung = dtgvAccount.SelectedRows[0].Cells["ID người dùng"].Value?.ToString();
+                string idNguoiDung = dtgvAccount.SelectedRows[0].Cells["ID người dùng"].Value?.ToString();
 
                 // Xác nhận trước khi xóa
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa người dùng này?",

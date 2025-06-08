@@ -31,7 +31,7 @@ namespace GiaoDien.Forms
             tbLoaiTaiKhoanUU.Text = selectedRow.SelectedRows[0].Cells["Loại tài khoản"].Value?.ToString();
             tbTenHienThiUU.Text = selectedRow.SelectedRows[0].Cells["Tên hiển thị"].Value?.ToString();
             tbTenDangNhapUU.Text = selectedRow.SelectedRows[0].Cells["Tên đăng nhập"].Value?.ToString();
-            string? gioiTinh = selectedRow.SelectedRows[0].Cells["Giới tính"].Value?.ToString();
+            string gioiTinh = selectedRow.SelectedRows[0].Cells["Giới tính"].Value?.ToString();
             comboBoxGioiTinhUU.SelectedItem = gioiTinh;
             tbMatKhauUU.Text = selectedRow!.SelectedRows[0].Cells["Mật khẩu"].Value?.ToString();
             DateTime ngayNhap = Convert.ToDateTime(selectedRow.SelectedRows[0].Cells["Ngày sinh"].Value);
@@ -58,7 +58,7 @@ namespace GiaoDien.Forms
             string tenHienThi = tbTenHienThiUU.Text.Trim();
             string matKhau = tbMatKhauUU.Text.Trim();
             string hoTen = tbHoTenUU.Text.Trim();
-            string? gioiTinh = comboBoxGioiTinhUU.SelectedItem?.ToString();
+            string  gioiTinh = comboBoxGioiTinhUU.SelectedItem?.ToString();
             DateTime ngaySinh = dateTimePickerUU.Value;
             string email = tbEmailUU.Text.Trim();
             string cccd = tbCCCDUU.Text.Trim();

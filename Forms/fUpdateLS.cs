@@ -26,7 +26,7 @@ namespace GiaoDien.Forms
             tbLoaiUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Loại"].Value?.ToString();
             tbGiongUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Giống"].Value?.ToString();
             tbChuongUpdateLS.Text = selectedRow.SelectedRows[0].Cells["Chuồng"].Value?.ToString();
-            string? gioiTinh = selectedRow.SelectedRows[0].Cells["Giới tính"].Value?.ToString();
+            string gioiTinh = selectedRow.SelectedRows[0].Cells["Giới tính"].Value?.ToString();
             comboBoxGioiTinhUpdateLS.SelectedItem = gioiTinh;
             tbCanNangUpdateLS.Text = selectedRow!.SelectedRows[0].Cells["Cân nặng"].Value?.ToString();
             DateTime ngayNhap = Convert.ToDateTime(selectedRow.SelectedRows[0].Cells["Ngày sinh"].Value);
@@ -53,10 +53,10 @@ namespace GiaoDien.Forms
         private void btnConfirmUpdateLS_Click(object sender, EventArgs e)
         {
             string loai = tbLoaiUpdateLS.Text.Trim();
-            string? gioiTinh = comboBoxGioiTinhUpdateLS.SelectedItem?.ToString();
+            string gioiTinh = comboBoxGioiTinhUpdateLS.SelectedItem?.ToString();
             string tenGiong = tbGiongUpdateLS.Text.Trim();
             DateTime ngaySinh = dateTimePickerUpdateLS.Value;
-            string? idNguoiDung = tbIDNguoiDungUpdateLS.Text.Trim();
+            string idNguoiDung = tbIDNguoiDungUpdateLS.Text.Trim();
             if (string.IsNullOrEmpty(gioiTinh))
             {
                 MessageBox.Show("Vui lòng chọn giới tính!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 using GiaoDien.DAO; // Sử dụng lớp DataProvider có sẵn
-
+#nullable disable
 namespace GiaoDien.Forms
 {
     public partial class fAddThucAn : Form
@@ -44,9 +44,9 @@ namespace GiaoDien.Forms
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             string ten = tbTen.Text.Trim();
-            string? loai = cbLoai.SelectedItem?.ToString();
-            string? maKho = cbMaKho.SelectedItem?.ToString();
-            string? donVi = cbDonVi.SelectedItem?.ToString();
+            string  loai = cbLoai.SelectedItem?.ToString();
+            string  maKho = cbMaKho.SelectedItem?.ToString();
+            string donVi = cbDonVi.SelectedItem?.ToString();
             DateTime hanSuDung = dtpHanSuDung.Value;
 
             if (string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(loai) || string.IsNullOrEmpty(maKho) || string.IsNullOrEmpty(donVi))
@@ -113,8 +113,8 @@ namespace GiaoDien.Forms
             if (result == DBNull.Value || result == null)
                 return prefix + "001";
 
-            string? lastID = result.ToString();
-            string? numberPart = new string(lastID.SkipWhile(c => !char.IsDigit(c)).ToArray());
+            string  lastID = result.ToString();
+            string  numberPart = new string(lastID.SkipWhile(c => !char.IsDigit(c)).ToArray());
 
             if (int.TryParse(numberPart, out int number))
             {

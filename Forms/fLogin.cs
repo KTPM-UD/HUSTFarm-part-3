@@ -13,7 +13,7 @@ namespace GiaoDien.Forms
 {
     public partial class fLogin : Form
     {
-        private fManager? fManager;
+        private fManager fManager;
         public fLogin(fManager f)
         {
             InitializeComponent();

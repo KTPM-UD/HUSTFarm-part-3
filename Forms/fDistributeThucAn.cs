@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GiaoDien.DAO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+#nullable disable
 namespace GiaoDien.Forms
 {
     public partial class fDistributeThucAn : Form

@@ -9,12 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+#nullable disable
 namespace GiaoDien.Forms
 {
     public partial class FormQLTANU : Form
     {
-        private fManager? fManager;
+        private fManager fManager;
         public FormQLTANU(fManager fManager)
         {
             InitializeComponent();
@@ -78,7 +78,7 @@ namespace GiaoDien.Forms
         {
             if (dtgvThucAn.SelectedRows.Count > 0)
             {
-                string? idThucAn = dtgvThucAn.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
+                string idThucAn = dtgvThucAn.SelectedRows[0].Cells["Mã Thức Ăn"].Value?.ToString();
                 if (string.IsNullOrEmpty(idThucAn)) return;
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa thức ăn này?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -131,10 +131,16 @@ namespace GiaoDien.Forms
     }
 
     var row = dtgvThucAn.SelectedRows[0];
-    string?id = row.Cells["Mã Thức Ăn"].Value?.ToString();
-    string?ten = row.Cells["Tên"].Value?.ToString();
-    string?donVi = row.Cells["Đơn Vị"].Value?.ToString();
-    int soLuong = Convert.ToInt32(row.Cells["Số Lượng"].Value); 
+    string id = row.Cells["Mã Thức Ăn"].Value?.ToString() ?? "";
+    string ten = row.Cells["Tên"].Value?.ToString() ?? "";
+    string donVi = row.Cells["Đơn Vị"].Value?.ToString() ?? "";
+    int soLuong = 0; 
+    if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(ten) || string.IsNullOrWhiteSpace(donVi) ||
+    !int.TryParse(row.Cells["Số Lượng"].Value?.ToString(), out soLuong))
+{
+    MessageBox.Show("Thông tin thức ăn không hợp lệ.");
+    return;
+}
 
     var form = new fDistributeThucAn(id, ten, donVi, soLuong);
     form.ShowDialog();

@@ -14,7 +14,7 @@ namespace GiaoDien.Forms
 {
     public partial class FormQLVN : Form
     {
-        private fManager? fManager;
+        private fManager fManager;
         public FormQLVN(fManager fManager)
         {
             InitializeComponent();
@@ -81,7 +81,7 @@ namespace GiaoDien.Forms
             if (dtgvLiveStock.SelectedRows.Count > 0)
             {
                 // Lấy ID vật nuôi từ dòng được chọn
-                string? idVatNuoi = dtgvLiveStock.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
+                string idVatNuoi = dtgvLiveStock.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
 
                 // Xác nhận trước khi xóa
                 DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa vật nuôi này?",

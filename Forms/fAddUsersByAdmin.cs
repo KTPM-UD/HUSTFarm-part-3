@@ -34,7 +34,7 @@ namespace GiaoDien.Forms
                 return "ND" + "001";
             }
 
-            string? lastID = result.ToString();
+            string lastID = result.ToString();
             if (string.IsNullOrEmpty(lastID))
             {
                 return "ND" + "001";
