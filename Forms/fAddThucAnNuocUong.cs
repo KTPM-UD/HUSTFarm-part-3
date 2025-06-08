@@ -81,7 +81,7 @@ namespace GiaoDien.Forms
                 INSERT INTO dbo.ThucAnNuocUong 
                     (IDThucAn, ten, loai, soLuong, donVi, hanSuDung, maKho)
                 VALUES 
-                    (@id, @ten, @loai, @soLuong, @donVi, @hanSuDung, @maKho)";
+                    ( @id , @ten , @loai , @soLuong , @donVi , @hanSuDung , @maKho )";
 
             try
             {

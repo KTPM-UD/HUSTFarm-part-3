@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GiaoDien")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0191c1dcfba63d8738d304f7364ce3ae0724975")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a212cd65761db4041dddaf6a364a4e8004e07cb0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GiaoDien")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GiaoDien")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

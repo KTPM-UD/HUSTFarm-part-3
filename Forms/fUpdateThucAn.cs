@@ -78,8 +78,8 @@ namespace GiaoDien.Forms
             // Câu truy vấn cập nhật
             string query = @"
                 UPDATE ThucAnNuocUong 
-                SET ten = @ten, loai = @loai, soLuong = @soLuong, 
-                    donVi = @donVi, hanSuDung = @hanSuDung, maKho = @maKho 
+                SET ten = @ten , loai = @loai , soLuong = @soLuong , 
+                    donVi = @donVi , hanSuDung = @hanSuDung , maKho = @maKho 
                 WHERE IDThucAn = @idCu";
 
             // Thực hiện truy vấn
