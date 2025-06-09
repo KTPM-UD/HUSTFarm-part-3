@@ -62,7 +62,7 @@ namespace GiaoDien.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 450);
+            this.ClientSize = new System.Drawing.Size(720, 470);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.dtgvLichSu);

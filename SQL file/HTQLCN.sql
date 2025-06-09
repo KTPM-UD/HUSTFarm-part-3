@@ -21,28 +21,29 @@ CREATE TABLE NguoiDung (
 	CCCD VARCHAR(50) NOT NULL,
     Diachi NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
     TenDangNhap NVARCHAR(50) NOT NULL,
-	CONSTRAINT FK_NguoiDung_TaiKhoan FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap) ON UPDATE CASCADE,
+	CONSTRAINT FK_NguoiDung_TaiKhoan FOREIGN KEY (TenDangNhap) REFERENCES TaiKhoan(TenDangNhap) ON UPDATE CASCADE
 );
 
--- 3. Bảng Vật nuôi
+-- 3. Bảng chuồng
+CREATE TABLE Chuong (
+    tenChuong NVARCHAR(30) NOT NULL PRIMARY KEY,
+    chuThich NVARCHAR(100) NOT NULL
+);
+
+-- 4. Bảng Vật nuôi
 CREATE TABLE VatNuoi (
     IDVatNuoi VARCHAR(10) NOT NULL PRIMARY KEY,
     loai NVARCHAR(100) NOT NULL DEFAULT N'Chưa nhập',
 	tenGiong NVARCHAR(100) NOT NULL,
-	tenChuong NVARCHAR(30) NOT NULL DEFAULT N'A1',
-    gioitinh NVARCHAR(30) NOT NULL DEFAULT N'Đực' CHECK (gioitinh IN(N'Cái',N'Đực')), --Cái || Đực
+	tenChuong NVARCHAR(30) NOT NULL,
+    gioitinh NVARCHAR(30) NOT NULL DEFAULT N'Đực' CHECK (gioitinh IN(N'Cái',N'Đực')),
     ngaySinh DATE NOT NULL,
     canNang FLOAT NOT NULL CHECK (canNang > 0),
-	IDNguoiDung VARCHAR(10) NULL, -- Khóa ngoại
+	IDNguoiDung VARCHAR(10) NULL,
     tinhTrangSucKhoe NVARCHAR(30) NOT NULL,
     ghiChu NVARCHAR(100) NULL,
 	CONSTRAINT FK_VatNuoi_NguoiDung FOREIGN KEY (IDNguoiDung) REFERENCES NguoiDung(IDNguoiDung) ON UPDATE CASCADE,
-);
-
--- 4. Bảng chuồng
-CREATE TABLE Chuong (
-    tenChuong NVARCHAR(100) NOT NULL PRIMARY KEY,
-    chuThich NVARCHAR(100) NOT NULL
+    CONSTRAINT FK_VatNuoi_tenChuong FOREIGN KEY (tenChuong) REFERENCES Chuong(tenChuong) ON UPDATE CASCADE
 );
 
 -- 5. Bảng Kho
@@ -53,42 +54,46 @@ CREATE TABLE Kho (
 
 -- 6. Bảng Thức ăn & nước uống
 CREATE TABLE ThucAnNuocUong (
-    IDThucAn VARCHAR(10) NOT NULL PRIMARY KEY,
+    IDThucAn NVARCHAR(50) NOT NULL PRIMARY KEY,
     ten NVARCHAR(100) NOT NULL,
     loai NVARCHAR(100) NOT NULL,
     soLuong INT NOT NULL CHECK (soLuong >= 0),
     donVi NVARCHAR(10),
     hanSuDung DATE NOT NULL,
 	maKho INT NOT NULL,
-	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho) ON UPDATE CASCADE,
+	CONSTRAINT FK_ThucAn_Kho FOREIGN KEY (maKho) REFERENCES Kho(maKho) ON UPDATE CASCADE
 );
 
 -- 7. Bảng phân phối thức ăn
 CREATE TABLE PhanPhoiThucAn (
     ID INT IDENTITY PRIMARY KEY,
-    IDThucAn NVARCHAR(50),
+    IDThucAn NVARCHAR(50) NULL,
     soLuong INT NOT NULL CHECK (soLuong >= 0),
-    Chuong NVARCHAR(10),
-    NgayPhanPhoi DATETIME DEFAULT GETDATE()
+    tenChuong NVARCHAR(30) NOT NULL,
+    NgayPhanPhoi DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_PhanPhoiThucAn_ThucAn FOREIGN KEY (IDThucAn) REFERENCES ThucAnNuocUong(IDThucAn) ON UPDATE CASCADE ON DELETE SET NULL,
+    CONSTRAINT FK_PhanPhoiThucAn_Chuong FOREIGN KEY (tenChuong) REFERENCES Chuong(tenChuong) ON UPDATE CASCADE
 );
 GO
+
 CREATE PROCEDURE USP_GetAccountByUserID
     @IDNguoiDung NVARCHAR(50)
 AS
 BEGIN
-SELECT 
-    TK.TenDangNhap, TK.TenHienThi, TK.Email, TK.LoaiTaiKhoan,
-    ND.IDNguoiDung, ND.HoTen, ND.gioitinh, ND.NgaySinh, ND.CCCD, ND.Diachi, TK.MatKhau
-FROM TaiKhoan TK
-JOIN NguoiDung ND ON TK.TenDangNhap = ND.TenDangNhap
-WHERE ND.IDNguoiDung = @IDNguoiDung
+    SELECT 
+        TK.TenDangNhap, TK.TenHienThi, TK.Email, TK.LoaiTaiKhoan,
+        ND.IDNguoiDung, ND.HoTen, ND.gioitinh, ND.NgaySinh, ND.CCCD, ND.Diachi, TK.MatKhau
+    FROM TaiKhoan TK
+    JOIN NguoiDung ND ON TK.TenDangNhap = ND.TenDangNhap
+    WHERE ND.IDNguoiDung = @IDNguoiDung
 END
 GO
+
 CREATE PROCEDURE USP_GetLivestockByID
 @IDVatNuoi NVARCHAR(50)
 AS
 BEGIN
-SELECT * FROM dbo.VatNuoi WHERE IDVatNuoi = @IDVatNuoi
+    SELECT * FROM dbo.VatNuoi WHERE IDVatNuoi = @IDVatNuoi
 END
 GO
 
@@ -110,28 +115,28 @@ BEGIN
         IDThucAn LIKE '%' + @keyword + '%'
         OR ten LIKE '%' + @keyword + '%'
 END
-
 GO
+
 CREATE PROCEDURE USP_Login
 @tenDangNhap NVARCHAR(50), @matKhau VARCHAR(255)
 AS
 BEGIN
-SELECT * FROM dbo.TaiKhoan tk 
-JOIN dbo.NguoiDung nd ON tk.TenDangNhap = nd.TenDangNhap
-WHERE tk.TenDangNhap = @tenDangNhap AND tk.MatKhau = @matKhau
+    SELECT * FROM dbo.TaiKhoan tk 
+    JOIN dbo.NguoiDung nd ON tk.TenDangNhap = nd.TenDangNhap
+    WHERE tk.TenDangNhap = @tenDangNhap AND tk.MatKhau = @matKhau
 END
-
 GO
+
 CREATE PROCEDURE USP_TongVatNuoi
 @idNguoiDung NVARCHAR(50)
 AS
 BEGIN
-SELECT COUNT(*) AS TongVatNuoi 
-FROM VatNuoi
-WHERE IDNguoiDung = @idNguoiDung
+    SELECT COUNT(*) AS TongVatNuoi 
+    FROM VatNuoi
+    WHERE IDNguoiDung = @idNguoiDung
 END
+GO
 
-SELECT ID, IDThucAn, soLuong, Chuong, NgayPhanPhoi
+SELECT ID, IDThucAn, soLuong, tenChuong, NgayPhanPhoi
 FROM PhanPhoiThucAn
-ORDER BY NgayPhanPhoi DESC
-
+ORDER BY NgayPhanPhoi DESC;

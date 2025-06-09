@@ -16,7 +16,7 @@ namespace GiaoDien.Forms
         private void LoadLichSuPhanPhoi()
         {
             string query = @"
-                SELECT ID, IDThucAn, soLuong, Chuong, NgayPhanPhoi
+                SELECT ID, IDThucAn, soLuong, tenChuong, NgayPhanPhoi
                 FROM PhanPhoiThucAn
                 ORDER BY NgayPhanPhoi DESC";
 

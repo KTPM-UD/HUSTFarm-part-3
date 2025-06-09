@@ -46,14 +46,14 @@ INSERT INTO NguoiDung (IDNguoiDung, HoTen, gioitinh, NgaySinh, CCCD, Diachi, Ten
 ('ND018', N'Trần Văn C', N'Nam', '1991-03-03', '123456789003', N'Hồ Chí Minh', N'user03'),
 ('ND019', N'Phạm Thị D', N'Nữ', '1993-04-04', '123456789004', N'Đà Nẵng', N'user04');
 
+-- ND001
+INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) VALUES 
+('HEO003', N'Lợn', N'Landrace', N'H2', N'Cái', '2023-02-15', 120.0, 'ND001', N'Bệnh mức 1', N'Cúm');
+
 -- ND002
-INSERT INTO dbo.VatNuoi(IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) VALUES 
+INSERT INTO dbo.VatNuoi VALUES 
 ('BO001', N'Bò', N'Simental', N'B1', N'Đực', '2022-05-01', 250.5,'ND002', N'Tốt', NULL),
 ('DE001', N'Dê', N'Bách Thảo', N'D1', N'Cái', '2023-09-20', 35.7, 'ND002', N'Tốt', NULL);
-
--- ND001
-INSERT INTO dbo.VatNuoi VALUES 
-('HEO003', N'Lợn', N'Landrace', N'H2', N'Cái', '2023-02-15', 120.0, 'ND001', N'Bệnh mức 1', N'Cúm');
 
 -- ND003
 INSERT INTO dbo.VatNuoi VALUES 
@@ -133,12 +133,10 @@ INSERT INTO dbo.VatNuoi VALUES
 
 
  --Kho
-INSERT INTO Kho (tenKho) VALUES 
+INSERT INTO dbo.Kho (tenKho) VALUES 
 (N'Kho Thức Ăn'),
 (N'Kho Nước Uống'),
 (N'Kho Thuốc');
-
-
 --Thức ăn
 INSERT INTO dbo.ThucAnNuocUong (IDThucAn, ten, loai, soLuong, donVi, hanSuDung, maKho) VALUES
 ('TA001', N'Hạt Ngũ Cốc', N'Thức ăn', 243, N'kg', '2026-12-25', 1),

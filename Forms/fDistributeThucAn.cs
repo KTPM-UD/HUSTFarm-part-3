@@ -61,8 +61,8 @@ namespace GiaoDien.Forms
 
             // Ghi lịch sử phân phối
             string insertHistory = @"
-                INSERT INTO dbo.PhanPhoiThucAn (IDThucAn, soLuong, Chuong)
-                VALUES ( @idThucAn , @soLuong , @chuong )";
+                INSERT INTO dbo.PhanPhoiThucAn (IDThucAn, soLuong, tenChuong)
+                VALUES ( @idThucAn , @soLuong , @tenchuong )";
             DataProvider.Instance.ExecuteNonQuery(insertHistory, new object[]
             {
                 idThucAn, soLuongNhap, chuong
