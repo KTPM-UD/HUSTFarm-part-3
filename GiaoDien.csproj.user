@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="fManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fAddChuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fAddKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fAddThucAnNuocUong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fAddUsersByAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fAddLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fDistributeThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQLKhoChuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQLND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQLThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQLVN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fLichSuPhanPhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fSearchLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fSearchThucAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fSearchUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fUpdateChuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fUpdateKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fUpdateLS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fUpdateTANU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\fUpdateUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
