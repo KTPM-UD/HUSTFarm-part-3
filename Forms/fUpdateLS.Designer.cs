@@ -221,6 +221,7 @@
             tbIDNguoiDungUpdateLS.Name = "tbIDNguoiDungUpdateLS";
             tbIDNguoiDungUpdateLS.Size = new Size(330, 71);
             tbIDNguoiDungUpdateLS.TabIndex = 41;
+            tbIDNguoiDungUpdateLS.TextChanged += tbIDNguoiDungUpdateLS_TextChanged;
             // 
             // cbTinhTrang
             // 

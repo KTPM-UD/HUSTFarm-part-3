@@ -53,11 +53,11 @@ namespace GiaoDien.Forms
             DataProvider.Instance.ExecuteNonQuery(updateQuery, new object[] { soLuongNhap, idThucAn });
 
             // Nếu số lượng phân phối bằng hiện có => xóa bản ghi
-            if (soLuongNhap == soLuongHienTai)
-            {
-                string deleteQuery = "DELETE FROM ThucAnNuocUong WHERE IDThucAn = @id";
-                DataProvider.Instance.ExecuteNonQuery(deleteQuery, new object[] { idThucAn });
-            }
+            //if (soLuongNhap == soLuongHienTai)
+            //{
+            //    string deleteQuery = "DELETE FROM ThucAnNuocUong WHERE IDThucAn = @id";
+            //    DataProvider.Instance.ExecuteNonQuery(deleteQuery, new object[] { idThucAn });
+            //}
 
             // Ghi lịch sử phân phối
             string insertHistory = @"

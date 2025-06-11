@@ -16,6 +16,7 @@ namespace GiaoDien.Forms
             InitializeComponent();
 
             comboBoxGioiTinhUpdateLS.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTinhTrang.DropDownStyle = ComboBoxStyle.DropDownList;
 
             // Gán giá trị từ dòng được chọn
             tbIDVatNuoiUpdateLS.Text = selectedRow.SelectedRows[0].Cells["ID vật nuôi"].Value?.ToString();
@@ -58,7 +59,7 @@ namespace GiaoDien.Forms
             string idNguoiDung = tbIDNguoiDungUpdateLS.Text.Trim();
             string idMoi = tbIDVatNuoiUpdateLS.Text.Trim();
             string tenChuong = cbChuongUpdateLS.Text.Trim();
-            string ghiChu = string.IsNullOrWhiteSpace(tbGhiChu.Text) ? null : tbGhiChu.Text.Trim();
+            string ghiChu = string.IsNullOrWhiteSpace(tbGhiChu.Text) ? "" : tbGhiChu.Text.Trim();
             string tinhTrang = cbTinhTrang.SelectedItem?.ToString() ?? "Tốt";
 
             // Kiểm tra dữ liệu
@@ -136,6 +137,11 @@ namespace GiaoDien.Forms
             }
 
             return dsChuong;
+        }
+
+        private void tbIDNguoiDungUpdateLS_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -242,3 +242,4 @@ D:\Visual STUDIO PROject\HUSTFarm-part-3-version1\obj\Debug\net9.0-windows\GiaoD
 D:\Visual STUDIO PROject\HUSTFarm-part-3-version1\obj\Debug\net9.0-windows\GiaoDien.Forms.fEditChuong.resources
 D:\Visual STUDIO PROject\HUSTFarm-part-3-version1\obj\Debug\net9.0-windows\GiaoDien.Forms.fUpdateTANU.resources
 D:\Visual STUDIO PROject\HUSTFarm-part-3-version1\obj\Debug\net9.0-windows\GiaoDien.Forms.fSearchThucAn.resources
+D:\Visual STUDIO PROject\HUSTFarm-part-3-version1\obj\Debug\net9.0-windows\GiaoDien.sourcelink.json
