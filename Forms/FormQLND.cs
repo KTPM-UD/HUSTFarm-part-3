@@ -102,16 +102,32 @@ namespace GiaoDien.Forms
                 {
                     try
                     {
-                        // Thực hiện xóa từ database
-                        string query = "DELETE FROM NguoiDung WHERE IDNguoiDung = @id";
                         if (string.IsNullOrEmpty(idNguoiDung)) return;
-                        int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { idNguoiDung });
 
-                        if (rowsAffected > 0)
+                        // Truy vấn lấy tên đăng nhập của người dùng trước khi xóa
+                        string getUsernameQuery = "SELECT TenDangNhap FROM NguoiDung WHERE IDNguoiDung = @id";
+                        object usernameObj = DataProvider.Instance.ExecuteScalar(getUsernameQuery, new object[] { idNguoiDung });
+
+                        if (usernameObj == null)
                         {
-                            // Xóa khỏi DataGridView
+                            MessageBox.Show("Không tìm thấy người dùng.");
+                            return;
+                        }
+
+                        string tenDangNhap = usernameObj.ToString();
+
+                        // 1. Xóa người dùng trước
+                        string deleteUserQuery = "DELETE FROM NguoiDung WHERE IDNguoiDung = @id";
+                        int userRows = DataProvider.Instance.ExecuteNonQuery(deleteUserQuery, new object[] { idNguoiDung });
+
+                        // 2. Xóa tài khoản sau
+                        string deleteAccountQuery = "DELETE FROM TaiKhoan WHERE TenDangNhap = @username";
+                        int accountRows = DataProvider.Instance.ExecuteNonQuery(deleteAccountQuery, new object[] { tenDangNhap });
+
+                        if (userRows > 0)
+                        {
                             dtgvAccount.Rows.Remove(dtgvAccount.SelectedRows[0]);
-                            MessageBox.Show("Xóa người dùng thành công!");
+                            MessageBox.Show("Đã xóa người dùng và tài khoản thành công!");
                         }
                         else
                         {

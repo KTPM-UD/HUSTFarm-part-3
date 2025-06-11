@@ -52,13 +52,6 @@ namespace GiaoDien.Forms
             string updateQuery = "UPDATE ThucAnNuocUong SET soLuong = soLuong - @soLuong WHERE IDThucAn = @id";
             DataProvider.Instance.ExecuteNonQuery(updateQuery, new object[] { soLuongNhap, idThucAn });
 
-            // Nếu số lượng phân phối bằng hiện có => xóa bản ghi
-            //if (soLuongNhap == soLuongHienTai)
-            //{
-            //    string deleteQuery = "DELETE FROM ThucAnNuocUong WHERE IDThucAn = @id";
-            //    DataProvider.Instance.ExecuteNonQuery(deleteQuery, new object[] { idThucAn });
-            //}
-
             // Ghi lịch sử phân phối
             string insertHistory = @"
                 INSERT INTO dbo.PhanPhoiThucAn (IDThucAn, soLuong, tenChuong)

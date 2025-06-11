@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fupdatels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\fdistributethucan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fdistributethucan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\forms\\fdistributethucan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\fdistributethucan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\forms\\formqlkhochuong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlkhochuong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\faddls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\faddls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,101 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fUpdateLS.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fUpdateLS.cs",
-              "RelativeDocumentMoniker": "Forms\\fUpdateLS.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fUpdateLS.cs [Design]",
-              "RelativeToolTip": "Forms\\fUpdateLS.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:51:26.786Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormQLVN.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
-              "RelativeDocumentMoniker": "Forms\\FormQLVN.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
-              "RelativeToolTip": "Forms\\FormQLVN.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:40:15.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fDistributeThucAn.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fDistributeThucAn.cs",
-              "RelativeDocumentMoniker": "Forms\\fDistributeThucAn.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fDistributeThucAn.cs",
-              "RelativeToolTip": "Forms\\fDistributeThucAn.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:40:03.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormQLVN.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
-              "RelativeDocumentMoniker": "Forms\\FormQLVN.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs [Design]",
-              "RelativeToolTip": "Forms\\FormQLVN.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:39:57.633Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fUpdateLS.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fUpdateLS.cs",
-              "RelativeDocumentMoniker": "Forms\\fUpdateLS.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fUpdateLS.cs",
-              "RelativeToolTip": "Forms\\fUpdateLS.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwBIAAABDAAAAAAAAAA==",
+              "Title": "FormQLND.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
+              "RelativeToolTip": "Forms\\FormQLND.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAgwI4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T09:34:59.363Z",
+              "WhenOpened": "2025-06-11T13:32:48.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "fDistributeThucAn.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fDistributeThucAn.cs",
-              "RelativeDocumentMoniker": "Forms\\fDistributeThucAn.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fDistributeThucAn.cs [Design]",
-              "RelativeToolTip": "Forms\\fDistributeThucAn.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "FormQLND.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs [Design]",
+              "RelativeToolTip": "Forms\\FormQLND.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T05:40:15.125Z",
+              "WhenOpened": "2025-06-11T13:32:46.432Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormQLKhoChuong.cs [Design]",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLKhoChuong.cs",
-              "RelativeDocumentMoniker": "Forms\\FormQLKhoChuong.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLKhoChuong.cs [Design]",
-              "RelativeToolTip": "Forms\\FormQLKhoChuong.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T09:51:57.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "fAddLS.cs",
-              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fAddLS.cs",
-              "RelativeDocumentMoniker": "Forms\\fAddLS.cs",
-              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fAddLS.cs",
-              "RelativeToolTip": "Forms\\fAddLS.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T09:32:35.388Z"
             }
           ]
         }
