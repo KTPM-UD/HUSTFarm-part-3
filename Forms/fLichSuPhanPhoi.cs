@@ -20,10 +20,7 @@ namespace GiaoDien.Forms
         }
         private void LoadLichSuPhanPhoi()
         {
-            string query = @"
-                SELECT ID, IDThucAn, soLuong, tenChuong, NgayPhanPhoi
-                FROM PhanPhoiThucAn
-                ORDER BY NgayPhanPhoi DESC";
+            string query = @"SELECT ID, IDThucAn AS [ID thức ăn], soLuong AS [Số lượng], tenChuong AS [Mã chuồng], NgayPhanPhoi AS [Ngày phân phối] FROM PhanPhoiThucAn ORDER BY NgayPhanPhoi DESC";
 
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             dtgvLichSu.DataSource = dt;

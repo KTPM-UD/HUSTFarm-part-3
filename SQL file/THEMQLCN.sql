@@ -77,7 +77,7 @@ INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySin
 
 -- ND005
 INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) VALUES 
-('HEO009', N'Heo', N'Heo Yorkshire', N'H2', N'Cái', '2024-01-20', 40.0, 'ND005',NULL, N'Tốt');
+('HEO009', N'Heo', N'Heo Yorkshire', N'H2', N'Cái', '2024-01-20', 40.0, 'ND005', N'Tốt',NULL);
 
 -- ND006
 INSERT INTO dbo.VatNuoi (IDVatNuoi, loai, tenGiong, tenChuong, gioitinh, ngaySinh, canNang, IDNguoiDung, tinhTrangSucKhoe, ghiChu) VALUES 

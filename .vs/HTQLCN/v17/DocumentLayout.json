@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlvn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\flichsuphanphoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\flichsuphanphoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\flichsuphanphoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\flichsuphanphoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|d:\\visual studio project\\hustfarm-part-3-version1\\forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54A8FD6F-05D5-4793-8C7B-0DCF96DE8222}|GiaoDien.csproj|solutionrelative:forms\\formqlnd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,19 +43,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FormQLVN.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLVN.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
+              "RelativeToolTip": "Forms\\FormQLVN.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:10:37.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormQLVN.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs",
+              "RelativeDocumentMoniker": "Forms\\FormQLVN.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLVN.cs [Design]",
+              "RelativeToolTip": "Forms\\FormQLVN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:10:23.569Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fLichSuPhanPhoi.cs",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fLichSuPhanPhoi.cs",
+              "RelativeDocumentMoniker": "Forms\\fLichSuPhanPhoi.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fLichSuPhanPhoi.cs",
+              "RelativeToolTip": "Forms\\fLichSuPhanPhoi.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:08:37.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fLichSuPhanPhoi.cs [Design]",
+              "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fLichSuPhanPhoi.cs",
+              "RelativeDocumentMoniker": "Forms\\fLichSuPhanPhoi.cs",
+              "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\fLichSuPhanPhoi.cs [Design]",
+              "RelativeToolTip": "Forms\\fLichSuPhanPhoi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T07:08:35.229Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FormQLND.cs",
               "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
               "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
               "ToolTip": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
               "RelativeToolTip": "Forms\\FormQLND.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAgwJIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAgwIMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T13:32:48.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FormQLND.cs [Design]",
               "DocumentMoniker": "D:\\Visual STUDIO PROject\\HUSTFarm-part-3-version1\\Forms\\FormQLND.cs",
               "RelativeDocumentMoniker": "Forms\\FormQLND.cs",
